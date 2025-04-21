@@ -1,8 +1,8 @@
 ---
 import "@fontsource/azeret-mono";
+import azeretMonoWoff2 from "@fontsource/azeret-mono/files/azeret-mono-latin-400-normal.woff2?url";
 import "./_base.css";
 
-import { ClientRouter } from "astro:transitions";
 import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "~/consts";
 export type Props = LayoutProps;
 
@@ -14,7 +14,7 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
 ---
 
 <!doctype html>
-<html lang="en" transition:name="root" transition:animate="none">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -47,7 +47,13 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
     <meta property="twitter:description" content={description} />
     {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 
-    <ClientRouter fallback="none" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={azeretMonoWoff2}
+      crossorigin="anonymous"
+    />
 
     <script is:inline>
       function setDarkMode(doc) {

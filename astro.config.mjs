@@ -24,8 +24,6 @@ export default defineConfig({
   adapter: vercel(),
   prefetch: {
     prefetchAll: true,
-    // defaultStrategy: "hover",
-    defaultStrategy: "viewport",
   },
 
   vite: {
