@@ -77,7 +77,14 @@
   --animate-blink: blink 1.5s steps(1) infinite;
   --animate-rotate: rotate 6s ease-in-out infinite;
   --animate-emoticon: emoticon 12s linear infinite;
+  --animate-presence: presence 1.2s ease-in-out forwards;
   --transition-property-shape: border-radius, box-shadow, transform, border-width, translate;
+
+  @keyframes presence {
+    0% {
+      opacity: 0;
+    }
+  }
 
   @keyframes blink {
     50% {

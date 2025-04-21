@@ -67,11 +67,9 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
       class={
         "text-gruvbox-fg dark:text-gruvboxDark-fg cursor-pointer transition-opacity duration-200 hover:opacity-100" +
-        (typeof localStorage !== "undefined"
-          ? (dark() || true) /* to force rerender */ && "theme" in localStorage
-            ? " opacity-70"
-            : " animate-rotate opacity-80"
-          : "")
+        ((dark() || true) /* to force rerender */ && "theme" in localStorage
+          ? " animate-presence opacity-70 dark:opacity-50 dark:hover:opacity-100"
+          : " animate-rotate opacity-80")
       }
       onClick={toggleTheme}
     >
