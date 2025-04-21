@@ -18,9 +18,9 @@ import FormattedDate from "~/components/FormattedDate.astro";
 import IconLink from "~/components/icons/IconLink.astro";
 
 const featuredProject: CardProps = {
-  title: "Varo",
+  title: "Venur",
   description:
-    "An AI-powered matchmaking platform for developers, open-source projects, and indie founders.",
+    "The ecommerce ecosystem for freelancers, entrepreneurs, and forward-thinking businesses.",
 };
 
 const latestPost = (await getCollection("blog")).sort(
@@ -98,17 +98,17 @@ const latestPost = (await getCollection("blog")).sort(
 
           <a
             slot="link"
-            href="https://varo.dev"
+            href="https://venur.me"
             class="flex items-center gap-1 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
-            title="Varo"
+            title="Venur"
           >
             <IconLink class="size-4" />
-            varo.dev
+            venur.me
           </a>
 
-          <a
+          <!-- <a
             slot="link"
             href="https://github.com/mugnavo/varo.dev"
             class="flex items-center gap-1 hover:underline"
@@ -118,7 +118,7 @@ const latestPost = (await getCollection("blog")).sort(
           >
             <IconGitHub class="size-4" />
             GitHub
-          </a>
+          </a> -->
         </IntroCard>
         <IntroCard title={latestPost.data.title} description={latestPost.data.description}>
           <div slot="subtitle">

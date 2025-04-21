@@ -20,7 +20,7 @@
     "@fontsource/azeret-mono": "^5.2.6",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.4",
-    "astro": "^5.7.3",
+    "astro": "^5.7.4",
     "astro-expressive-code": "^0.41.1",
     "solid-js": "^1.9.5",
     "tailwindcss": "^4.1.4",
