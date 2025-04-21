@@ -151,9 +151,6 @@
 
 @utility nb-shadow-on {
   box-shadow: 2px 2px 0 0px #3c3836;
-  &:hover {
-    box-shadow: none;
-  }
 }
 
 @utility trail_hidden {

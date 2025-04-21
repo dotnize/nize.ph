@@ -30,9 +30,9 @@ const latestPost = (await getCollection("blog")).sort(
 
 <BaseLayout>
   <div class="flex w-full flex-col gap-32 pt-16">
-    <div class="flex w-full flex-col items-center gap-5">
+    <div class="flex w-full flex-col items-center gap-6">
       <div
-        class="text-gruvbox-fg dark:text-gruvboxDark-fg flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:gap-7"
+        class="text-gruvbox-fg dark:text-gruvboxDark-fg group flex flex-col items-center justify-center gap-5"
       >
         <Image
           src="/images/nize.png"
@@ -40,9 +40,13 @@ const latestPost = (await getCollection("blog")).sort(
           width={80}
           height={80}
           loading="eager"
-          class="nb-shadow-on border-gruvbox-fg bg-gruvbox-bg transition-shape rounded-xs border duration-200 dark:rounded-[40px] dark:border-none dark:shadow-none dark:hover:-translate-y-1"
+          class="nb-shadow-on border-gruvbox-fg bg-gruvbox-bg transition-shape rounded-xs border duration-200 group-hover:shadow-none dark:rounded-[40px] dark:border-none dark:shadow-none dark:group-hover:-translate-y-1"
         />
-        <span class="font-azeret text-3xl">// nize</span>
+        <span
+          class="font-azeret border-gruvbox-fg not-motion-reduce:animate-blink not-motion-reduce:dark:border-gruvboxDark-fg border-r-18 pr-4 text-3xl leading-8 motion-reduce:border-transparent"
+        >
+          <span class="text-gruvbox-aqua dark:text-gruvboxDark-aqua2">&gt;</span> nize
+        </span>
       </div>
       <p class="my-4 max-w-[40ch] text-center font-sans sm:my-1 sm:text-lg">
         I'm Nathaniel, a software engineer and part-time nerd who loves building stuff on the web.
