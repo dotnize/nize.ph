@@ -1,16 +1,7 @@
 {
   "headers": [
     {
-      "source": "/images/nize.webp",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
-      ]
-    },
-    {
-      "source": "/images/cover.jpg",
+      "source": "/(images/)?:file\\.(png|jpg|webp)",
       "headers": [
         {
           "key": "Cache-Control",
