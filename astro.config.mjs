@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -28,5 +28,15 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.google(),
+        name: "Azeret Mono",
+        cssVariable: "--font-azeret-mono",
+      },
+    ],
   },
 });

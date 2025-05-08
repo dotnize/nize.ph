@@ -1,6 +1,5 @@
 ---
-import "@fontsource/azeret-mono";
-import azeretMonoWoff2 from "@fontsource/azeret-mono/files/azeret-mono-latin-400-normal.woff2?url";
+import { Font } from "astro:assets";
 import "./_base.css";
 
 import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "~/consts";
@@ -47,13 +46,7 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
     <meta property="twitter:description" content={description} />
     {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href={azeretMonoWoff2}
-      crossorigin="anonymous"
-    />
+    <Font cssVariable="--font-azeret-mono" preload />
 
     <script is:inline>
       function setDarkMode(doc) {

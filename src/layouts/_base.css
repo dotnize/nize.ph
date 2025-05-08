@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-azeret: "Azeret Mono", monospace;
+  --font-azeret: var(--font-azeret-mono), monospace;
 
   /* TODO: refactor colors using dark: selector */
   --color-gruvboxDark-bg: #282828;
