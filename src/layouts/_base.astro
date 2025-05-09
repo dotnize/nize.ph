@@ -3,6 +3,7 @@ import { Font } from "astro:assets";
 import "./_base.css";
 
 import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "~/consts";
+import { ClientRouter } from "astro:transitions";
 export type Props = LayoutProps;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -13,7 +14,7 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="none" transition:name="root">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -47,6 +48,8 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
     {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 
     <Font cssVariable="--font-azeret-mono" preload />
+
+    <ClientRouter fallback="none" />
 
     <script is:inline>
       function setDarkMode(doc) {
