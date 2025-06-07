@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<header class="flex items-center justify-between pt-24 max-sm:text-sm">
+  <Image
+    src="/images/nize.webp"
+    alt="nize's avatar"
+    width={44}
+    height={44}
+    loading="eager"
+    class="bg-card rounded-[22px]"
+  />
+  <nav>
+    <ul class="font-azeret flex items-center gap-4">
+      <li><a href="/" class="">home</a></li>
+      <li><a href="/blog/" class="">posts</a></li>
+      <li>
+        <ThemeToggle />
+      </li>
+    </ul>
+  </nav>
+</header>

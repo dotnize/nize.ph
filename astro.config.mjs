@@ -2,7 +2,7 @@ import { defineConfig, fontProviders } from "astro/config";
 
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import solidJs from "@astrojs/solid-js";
+// import solidJs from "@astrojs/solid-js";
 import expressiveCode from "astro-expressive-code";
 
 import vercel from "@astrojs/vercel";
@@ -18,7 +18,7 @@ export default defineConfig({
     }),
     mdx(),
     sitemap(),
-    solidJs(),
+    // solidJs(),
   ],
   output: "static",
   adapter: vercel(),

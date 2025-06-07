@@ -1,6 +1,6 @@
 ---
 import { Font } from "astro:assets";
-import "./_base.css";
+import "./base.css";
 
 import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "~/consts";
 export type Props = LayoutProps;
@@ -23,8 +23,8 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <meta name="msapplication-TileColor" content="#fbf1c7" />
-    <meta name="theme-color" content="#fbf1c7" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
 
     <link rel="canonical" href={canonicalURL} />
 
@@ -67,7 +67,7 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
       console.log("Hello, fellow developer! 👋");
     </script>
   </head>
-  <body class="bg-gruvbox-bgH text-gruvbox-fg1 dark:bg-gruvboxDark-bgXH dark:text-gruvboxDark-fg3">
+  <body class="bg-background text-foreground">
     <slot />
   </body>
 </html>
