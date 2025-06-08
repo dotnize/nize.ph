@@ -44,6 +44,6 @@ export default defineConfig({
   },
   redirects: {
     "/blog": "/posts",
-    "/blog/[...slug]": "/posts/[...slug]",
+    "/blog/[id]": "/posts/[id]",
   },
 });
