@@ -2,7 +2,7 @@
 
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:is(.dark *));
-@custom-variant pink (&:is(.pink *));
+@custom-variant macchiato (&:is(.macchiato *));
 
 @theme {
   --font-azeret: var(--font-azeret-mono);
@@ -19,6 +19,25 @@
 
 @utility nb-shadow-on {
   box-shadow: 4px 4px 0 0px #3c3836;
+}
+
+@utility prose {
+  --tw-prose-body: var(--color-foreground);
+  --tw-prose-headings: var(--color-foreground);
+  --tw-prose-lead: color-mix(in oklab, var(--color-foreground) 98%, transparent);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-foreground-highlight);
+  --tw-prose-counters: color-mix(in oklab, var(--color-foreground) 96%, transparent);
+  --tw-prose-bullets: color-mix(in oklab, var(--color-background) 96%, white);
+  --tw-prose-hr: color-mix(in oklab, var(--color-background) 96%, white);
+  --tw-prose-quotes: color-mix(in oklab, var(--color-foreground) 98%, transparent);
+  --tw-prose-quote-borders: color-mix(in oklab, var(--color-background) 96%, white);
+  --tw-prose-captions: color-mix(in oklab, var(--color-foreground) 96%, transparent);
+  --tw-prose-code: var(--color-foreground-highlight);
+  --tw-prose-pre-code: var(--color-foreground);
+  --tw-prose-pre-bg: var(--color-background);
+  --tw-prose-th-borders: color-mix(in oklab, var(--color-background) 94%, white);
+  --tw-prose-td-borders: color-mix(in oklab, var(--color-foreground) 96%, white);
 }
 
 @layer base {
@@ -51,7 +70,7 @@
   --accent-foreground: #1d2021;
 }
 
-.pink {
+.macchiato {
   --background: #1e1e2e;
   --foreground: #cdd6f4;
   --foreground-highlight: #f5c2e7;

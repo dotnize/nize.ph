@@ -13,8 +13,8 @@ export default defineConfig({
   site: "https://nize.ph",
   integrations: [
     expressiveCode({
-      themes: ["everforest-light", "everforest-dark"],
-      themeCssSelector: (theme) => `.${theme.type}`,
+      themes: ["everforest-light", "everforest-dark", "catppuccin-macchiato"],
+      themeCssSelector: (theme) => `.${theme.name.split("-").at(-1)}`,
     }),
     mdx(),
     sitemap(),
@@ -41,5 +41,9 @@ export default defineConfig({
         subsets: ["latin"],
       },
     ],
+  },
+  redirects: {
+    "/blog": "/posts",
+    "/blog/[...slug]": "/posts/[...slug]",
   },
 });

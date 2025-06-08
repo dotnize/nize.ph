@@ -4,8 +4,9 @@ import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header class="flex items-center justify-between pt-24">
-  <div
-    class="pink:rounded-[22px] bg-pfp pink:hover:-translate-y-1 transition-[border-radius,translate] duration-200 dark:rounded-[22px] dark:hover:-translate-y-1"
+  <a
+    href="/"
+    class="macchiato:rounded-[22px] bg-pfp macchiato:hover:-translate-y-1 transition-[border-radius,translate] duration-200 dark:rounded-[22px] dark:hover:-translate-y-1"
   >
     <Image
       src="/images/nize.webp"
@@ -13,9 +14,9 @@ import ThemeToggle from "./ThemeToggle.astro";
       width={44}
       height={44}
       loading="eager"
-      class="pink:rounded-[22px] pink:outline-0 outline-foreground nb-shadow-on pink:shadow-none rounded-md outline-1 transition-[border-radius,box-shadow] duration-200 hover:shadow-none dark:rounded-[22px] dark:shadow-none dark:outline-0"
+      class="macchiato:rounded-[22px] macchiato:outline-0 outline-foreground nb-shadow-on macchiato:shadow-none rounded-md outline-1 transition-[border-radius,box-shadow] duration-200 hover:shadow-none dark:rounded-[22px] dark:shadow-none dark:outline-0"
     />
-  </div>
+  </a>
   <nav>
     <ul class="flex items-center gap-4">
       <li><a href="/" class="hover:text-accent transition-colors">home</a></li>

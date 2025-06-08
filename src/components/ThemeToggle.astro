@@ -72,7 +72,7 @@
       sunIcon.style.display = "none";
       moonIcon.style.display = "none";
       heartIcon.style.display = "block";
-    } else if (theme === "pink") {
+    } else if (theme === "macchiato") {
       sunIcon.style.display = "block";
       moonIcon.style.display = "none";
       heartIcon.style.display = "none";
@@ -90,18 +90,18 @@
     ) {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.remove("light");
-      document.documentElement.classList.add("pink");
-      localStorage.theme = "pink";
-      theme = "pink";
-    } else if (document.documentElement.classList.contains("pink")) {
+      document.documentElement.classList.add("macchiato");
+      localStorage.theme = "macchiato";
+      theme = "macchiato";
+    } else if (document.documentElement.classList.contains("macchiato")) {
       document.documentElement.classList.remove("dark");
-      document.documentElement.classList.remove("pink");
+      document.documentElement.classList.remove("macchiato");
       document.documentElement.classList.add("light");
       localStorage.theme = "light";
       theme = "light";
     } else {
       document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("pink");
+      document.documentElement.classList.remove("macchiato");
       document.documentElement.classList.remove("light");
       localStorage.theme = "dark";
       theme = "dark";
@@ -112,8 +112,8 @@
 
   // Initialize on page load
   function init() {
-    if (document.documentElement.classList.contains("pink")) {
-      theme = "pink";
+    if (document.documentElement.classList.contains("macchiato")) {
+      theme = "macchiato";
     } else if (document.documentElement.classList.contains("dark")) {
       theme = "dark";
     } else {

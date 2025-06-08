@@ -50,10 +50,10 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
 
     <script is:inline>
       function setTheme(doc) {
-        if (localStorage.theme === "pink") {
+        if (localStorage.theme === "macchiato") {
           doc.documentElement.classList.remove("dark");
           doc.documentElement.classList.remove("light");
-          doc.documentElement.classList.add("pink");
+          doc.documentElement.classList.add("macchiato");
         } else if (
           localStorage.theme === "dark" ||
           (!localStorage.getItem("theme") &&
@@ -61,11 +61,11 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
         ) {
           doc.documentElement.classList.add("dark");
           doc.documentElement.classList.remove("light");
-          doc.documentElement.classList.remove("pink");
+          doc.documentElement.classList.remove("macchiato");
         } else {
           doc.documentElement.classList.remove("dark");
           doc.documentElement.classList.add("light");
-          doc.documentElement.classList.remove("pink");
+          doc.documentElement.classList.remove("macchiato");
         }
       }
       setTheme(document);
