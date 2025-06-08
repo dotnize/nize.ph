@@ -46,7 +46,7 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
     <meta property="twitter:description" content={description} />
     {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 
-    <Font cssVariable="--font-azeret-mono" preload />
+    <Font cssVariable="--font-custom" preload />
 
     <script is:inline>
       function setTheme(doc) {
@@ -73,7 +73,7 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
       console.log("Hello, fellow developer! 👋");
     </script>
   </head>
-  <body class="bg-background text-foreground">
+  <body class="bg-background text-foreground font-main">
     <slot />
   </body>
 </html>

@@ -34,11 +34,12 @@ export default defineConfig({
     fonts: [
       {
         provider: fontProviders.google(),
-        name: "Azeret Mono",
-        cssVariable: "--font-azeret-mono",
-        fallbacks: ["monospace"],
+        name: "Rubik",
+        cssVariable: "--font-custom",
+        fallbacks: ["sans-serif"],
         styles: ["normal"],
         subsets: ["latin"],
+        weights: [400],
       },
     ],
   },

@@ -48,10 +48,10 @@ const latestPosts = (await getCollection("posts"))
 ---
 
 <PageLayout>
-  <main class="space-y-24">
+  <main class="mt-4 space-y-24">
     <div class="space-y-10">
-      <div class="space-y-6">
-        <h1 class="text-foreground-highlight text-6xl font-black sm:text-8xl">nize</h1>
+      <div class="space-y-4">
+        <h1 class="text-foreground-highlight text-6xl font-black sm:text-7xl">nize</h1>
 
         <h2 class="text-lg sm:text-xl">
           i'm nathaniel, a <span class="text-accent">software engineer</span> and self-proclaimed nerd
@@ -113,7 +113,7 @@ const latestPosts = (await getCollection("posts"))
           more on github <IconLink class="size-4" />
         </a>
       </div>
-      <div class="grid grid-cols-2 gap-2 sm:gap-4">
+      <div class="grid grid-cols-2 gap-x-2 gap-y-3 sm:gap-x-4 sm:gap-y-5">
         {projects.map((project) => <ProjectCard {...project} />)}
       </div>
     </div>
