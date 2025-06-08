@@ -17,7 +17,9 @@ export default defineConfig({
       themeCssSelector: (theme) => `.${theme.name.split("-").at(-1)}`,
     }),
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.startsWith("https://nize.ph/blog"),
+    }),
     // solidJs(),
   ],
   output: "static",
