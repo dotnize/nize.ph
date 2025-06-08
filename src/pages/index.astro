@@ -1,6 +1,9 @@
 ---
+import { getCollection } from "astro:content";
+
 import IconEmail from "~/components/icons/IconEmail.astro";
 import IconGitHub from "~/components/icons/IconGitHub.astro";
+import IconLink from "~/components/icons/IconLink.astro";
 import IconLinkedIn from "~/components/icons/IconLinkedIn.astro";
 import IconX from "~/components/icons/IconX.astro";
 import ProjectCard from "~/components/ProjectCard.astro";
@@ -38,15 +41,19 @@ const projects = [
   //   image: "/images/project-two.jpg",
   // }
 ];
+
+const latestPosts = (await getCollection("posts"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3); // last 2 posts only
 ---
 
 <PageLayout>
   <main class="space-y-24">
     <div class="space-y-10">
       <div class="space-y-6">
-        <h1 class="text-foreground-highlight text-7xl font-black sm:text-8xl">nize</h1>
+        <h1 class="text-foreground-highlight text-6xl font-black sm:text-8xl">nize</h1>
 
-        <h2 class="text-foreground text-xl">
+        <h2 class="text-lg sm:text-xl">
           i'm nathaniel, a software engineer and self-proclaimed nerd who loves building stuff on
           the web.
         </h2>
@@ -55,7 +62,7 @@ const projects = [
       <div class="flex items-center gap-10">
         <a href="mailto:nat@nize.ph" title="nat@nize.ph">
           <IconEmail
-            class="text-foreground size-6 opacity-90 transition-opacity duration-200 hover:opacity-100"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
         <a
@@ -65,7 +72,7 @@ const projects = [
           rel="noopener noreferrer"
         >
           <IconGitHub
-            class="text-foreground size-6 opacity-90 transition-opacity duration-200 hover:opacity-100"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
         <a
@@ -75,7 +82,7 @@ const projects = [
           rel="noopener noreferrer"
         >
           <IconX
-            class="text-foreground size-6 opacity-90 transition-opacity duration-200 hover:opacity-100"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
         <a
@@ -85,17 +92,56 @@ const projects = [
           rel="noopener noreferrer"
         >
           <IconLinkedIn
-            class="text-foreground size-6 opacity-90 transition-opacity duration-200 hover:opacity-100"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
       </div>
     </div>
-
-    <div>
-      <div class="text-2xl font-bold sm:text-3xl">some of my work</div>
-      <div class="mt-4 grid grid-cols-2 gap-2 sm:gap-4">
+    <div class="space-y-4">
+      <div class="flex items-end justify-between">
+        <div class="text-3xl font-bold">
+          <span class="max-sm:hidden">some of my work</span>
+          <span class="sm:hidden">projects</span>
+        </div>
+        <a
+          href="https://github.com/dotnize?tab=repositories&sort=stargazers"
+          title="GitHub repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 text-sm hover:underline"
+        >
+          more on github <IconLink class="size-4" />
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-2 sm:gap-4">
         {projects.map((project) => <ProjectCard {...project} />)}
       </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="text-3xl font-bold">writing</div>
+      <div class="grid gap-2">
+        {
+          latestPosts.map((post) => (
+            <a
+              class="group flex items-center justify-between"
+              href={`/posts/${post.id.split("/").pop()}/`}
+            >
+              <span class="text-foreground-highlight group-hover:text-accent font-medium transition-colors duration-200">
+                {post.data.title}
+              </span>
+              <time datetime={post.data.pubDate.toISOString()} class="text-sm max-sm:sr-only">
+                {post.data.pubDate.toLocaleDateString("en-us", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </a>
+          ))
+        }
+      </div>
+      <a href="/posts/" class="text-sm hover:underline"> more posts &rightarrow; </a>
     </div>
   </main>
 </PageLayout>

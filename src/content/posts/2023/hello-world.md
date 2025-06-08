@@ -1,6 +1,6 @@
 ---
 title: "Hello, world!"
-description: "My first blog post. A short introduction to myself and this site."
+description: "My first post. A short introduction to myself and this site."
 pubDate: "April 17 2023"
 ---
 
