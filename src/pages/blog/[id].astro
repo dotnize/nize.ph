@@ -9,4 +9,5 @@ export async function getStaticPaths() {
     props: { post },
   }));
 }
+return Astro.redirect(`/posts/${Astro.props.post.id.split("/").pop()}/`, 301);
 ---
