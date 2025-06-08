@@ -29,6 +29,8 @@ const { title, description, image, url } = Astro.props;
       alt="Project Image"
       width={300}
       height={200}
+      loading="lazy"
+      decoding="async"
       class="w-full rounded-xl transition-[filter] duration-200 group-hover:blur-[1px]"
     />
   </div>
