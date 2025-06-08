@@ -1,13 +1,4 @@
 ---
-import { getCollection } from "astro:content";
-export async function getStaticPaths() {
-  const posts = await getCollection("posts");
-  return posts.map((post) => ({
-    params: {
-      id: post.id.split("/").pop(),
-    },
-    props: { post },
-  }));
-}
-return Astro.redirect(`/posts/${Astro.props.post.id.split("/").pop()}/`, 301);
+export const prerender = false;
+return Astro.redirect(`/posts/${Astro.params.id}/`, 301);
 ---
