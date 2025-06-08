@@ -54,8 +54,8 @@ const latestPosts = (await getCollection("posts"))
         <h1 class="text-foreground-highlight text-6xl font-black sm:text-8xl">nize</h1>
 
         <h2 class="text-lg sm:text-xl">
-          i'm nathaniel, a software engineer and self-proclaimed nerd who loves building stuff on
-          the web.
+          i'm nathaniel, a <span class="text-accent">software engineer</span> and self-proclaimed nerd
+          who loves building stuff on the web.
         </h2>
       </div>
 
@@ -108,7 +108,7 @@ const latestPosts = (await getCollection("posts"))
           title="GitHub repositories"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1 text-sm hover:underline"
+          class="text-accent inline-flex items-center gap-1 text-sm hover:underline"
         >
           more on github <IconLink class="size-4" />
         </a>
@@ -127,7 +127,7 @@ const latestPosts = (await getCollection("posts"))
               class="group flex items-center justify-between"
               href={`/posts/${post.id.split("/").pop()}/`}
             >
-              <span class="text-foreground-highlight group-hover:text-accent font-medium transition-colors duration-200">
+              <span class="text-foreground group-hover:text-accent font-medium transition-colors duration-200">
                 {post.data.title}
               </span>
               <time datetime={post.data.pubDate.toISOString()} class="text-sm max-sm:sr-only">
@@ -141,7 +141,7 @@ const latestPosts = (await getCollection("posts"))
           ))
         }
       </div>
-      <a href="/posts/" class="text-sm hover:underline"> more posts &rightarrow; </a>
+      <a href="/posts/" class="text-accent text-sm hover:underline"> more posts &rightarrow; </a>
     </div>
   </main>
 </PageLayout>

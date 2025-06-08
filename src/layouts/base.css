@@ -2,6 +2,7 @@
 
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:is(.dark *));
+@custom-variant pink (&:is(.pink *));
 
 @theme {
   --font-azeret: var(--font-azeret-mono);
@@ -10,25 +11,10 @@
   --color-foreground: var(--foreground);
   --color-foreground-highlight: var(--foreground-highlight);
 
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-pfp: var(--pfp);
 
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-
-  --color-destructive: var(--destructive);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
 
   --animate-blink: blink 1.5s steps(1) infinite;
 
@@ -37,6 +23,10 @@
       border-color: transparent;
     }
   }
+}
+
+@utility nb-shadow-on {
+  box-shadow: 4px 4px 0 0px #3c3836;
 }
 
 @layer base {
@@ -54,25 +44,10 @@
   --foreground: #3c3836;
   --foreground-highlight: #282828;
 
-  --card: #fbf1c7;
-  --card-foreground: oklch(0.145 0 0);
-
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --pfp: #fbf1c7;
 
   --accent: #427b58;
   --accent-foreground: #f9f5d7;
-
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
 }
 
 .dark {
@@ -80,23 +55,18 @@
   --foreground: #d5c4a1;
   --foreground-highlight: #ebdbb2;
 
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-
   --accent: #8ec07c;
   --accent-foreground: #1d2021;
+}
 
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+.pink {
+  --background: #f5eff5;
+  --foreground: #4c4f69;
+  --foreground-highlight: #ea76cb;
+
+  --pfp: #ea76cb;
+  --card-foreground: oklch(0.145 0 0);
+
+  --accent: #ea76cb;
+  --accent-foreground: #f9f5d7;
 }
