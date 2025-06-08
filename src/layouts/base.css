@@ -15,14 +15,6 @@
 
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-
-  --animate-blink: blink 1.5s steps(1) infinite;
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
 }
 
 @utility nb-shadow-on {
@@ -60,13 +52,12 @@
 }
 
 .pink {
-  --background: #f5eff5;
-  --foreground: #4c4f69;
-  --foreground-highlight: #ea76cb;
+  --background: #1e1e2e;
+  --foreground: #cdd6f4;
+  --foreground-highlight: #f5c2e7;
 
-  --pfp: #ea76cb;
-  --card-foreground: oklch(0.145 0 0);
+  --pfp: #f9e2af;
 
-  --accent: #ea76cb;
-  --accent-foreground: #f9f5d7;
+  --accent: #f5c2e7;
+  --accent-foreground: black;
 }
