@@ -2,7 +2,7 @@ import { defineConfig, fontProviders } from "astro/config";
 
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import solidJs from "@astrojs/solid-js";
+// import solidJs from "@astrojs/solid-js";
 import expressiveCode from "astro-expressive-code";
 
 import vercel from "@astrojs/vercel";
@@ -13,12 +13,12 @@ export default defineConfig({
   site: "https://nize.ph",
   integrations: [
     expressiveCode({
-      themes: ["everforest-light", "everforest-dark"],
-      themeCssSelector: (theme) => `.${theme.type}`,
+      themes: ["everforest-light", "everforest-dark", "catppuccin-macchiato"],
+      themeCssSelector: (theme) => `.${theme.name.split("-").at(-1)}`,
     }),
     mdx(),
     sitemap(),
-    solidJs(),
+    // solidJs(),
   ],
   output: "static",
   adapter: vercel(),
@@ -34,12 +34,17 @@ export default defineConfig({
     fonts: [
       {
         provider: fontProviders.google(),
-        name: "Azeret Mono",
-        cssVariable: "--font-azeret-mono",
-        fallbacks: ["monospace"],
+        name: "Rubik",
+        cssVariable: "--font-custom",
+        fallbacks: ["sans-serif"],
         styles: ["normal"],
         subsets: ["latin"],
+        weights: [400],
       },
     ],
+  },
+  redirects: {
+    "/blog": "/posts",
+    "/blog/[id]": "/posts/[id]",
   },
 });

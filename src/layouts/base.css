@@ -1,0 +1,82 @@
+@import "tailwindcss" source("../");
+
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:is(.dark *));
+@custom-variant macchiato (&:is(.macchiato *));
+
+@theme {
+  --font-main: var(--font-custom);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-highlight: var(--foreground-highlight);
+
+  --color-pfp: var(--pfp);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}
+
+@utility nb-shadow-on {
+  box-shadow: 4px 4px 0 0px #3c3836;
+}
+
+@utility prose {
+  --tw-prose-body: var(--color-foreground);
+  --tw-prose-headings: var(--color-foreground);
+  --tw-prose-lead: color-mix(in oklab, var(--color-foreground) 98%, transparent);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-foreground-highlight);
+  --tw-prose-counters: color-mix(in oklab, var(--color-foreground) 96%, transparent);
+  --tw-prose-bullets: color-mix(in oklab, var(--color-background) 96%, white);
+  --tw-prose-hr: color-mix(in oklab, var(--color-background) 96%, white);
+  --tw-prose-quotes: color-mix(in oklab, var(--color-foreground) 98%, transparent);
+  --tw-prose-quote-borders: color-mix(in oklab, var(--color-background) 96%, white);
+  --tw-prose-captions: color-mix(in oklab, var(--color-foreground) 96%, transparent);
+  --tw-prose-code: var(--color-foreground-highlight);
+  --tw-prose-pre-code: var(--color-foreground);
+  --tw-prose-pre-bg: var(--color-background);
+  --tw-prose-th-borders: color-mix(in oklab, var(--color-background) 94%, white);
+  --tw-prose-td-borders: color-mix(in oklab, var(--color-foreground) 96%, white);
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  * {
+    scrollbar-width: thin;
+  }
+}
+
+:root {
+  --background: #f9f5d7;
+  --foreground: #3c3836;
+  --foreground-highlight: #282828;
+
+  --pfp: #fbf1c7;
+
+  --accent: #427b58;
+  --accent-foreground: #f9f5d7;
+}
+
+.dark {
+  --background: #1d2021;
+  --foreground: #d5c4a1;
+  --foreground-highlight: #ebdbb2;
+
+  --accent: #8ec07c;
+  --accent-foreground: #1d2021;
+}
+
+.macchiato {
+  --background: #1e1e2e;
+  --foreground: #cdd6f4;
+  --foreground-highlight: #f5c2e7;
+
+  --pfp: #f9e2af;
+
+  --accent: #f5c2e7;
+  --accent-foreground: black;
+}

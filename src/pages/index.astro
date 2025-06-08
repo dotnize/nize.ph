@@ -1,61 +1,68 @@
 ---
-import IntroCard, { type Props as CardProps } from "~/components/IntroCard.astro";
-
-import IconDocument from "~/components/icons/IconDocument.astro";
-import IconEmail from "~/components/icons/IconEmail.astro";
-import IconGitHub from "~/components/icons/IconGitHub.astro";
-import IconLinkedIn from "~/components/icons/IconLinkedIn.astro";
-import IconTools from "~/components/icons/IconTools.astro";
-import IconX from "~/components/icons/IconX.astro";
-
-import BaseLayout from "~/layouts/BaseLayout.astro";
-
-import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
-import Cmd from "~/components/Cmd.astro";
-import FormattedDate from "~/components/FormattedDate.astro";
+import IconEmail from "~/components/icons/IconEmail.astro";
+import IconGitHub from "~/components/icons/IconGitHub.astro";
 import IconLink from "~/components/icons/IconLink.astro";
+import IconLinkedIn from "~/components/icons/IconLinkedIn.astro";
+import IconX from "~/components/icons/IconX.astro";
+import ProjectCard from "~/components/ProjectCard.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 
-const featuredProject: CardProps = {
-  title: "Venur",
-  description:
-    "The ecommerce ecosystem for freelancers, entrepreneurs, and forward-thinking businesses.",
-};
+const projects = [
+  {
+    title: "Venur",
+    description: "The ecommerce ecosystem for entrepreneurs, and businesses.",
+    url: "https://venur.me/",
+    image: "/images/venur.webp",
+  },
+  {
+    title: "chessu",
+    description: "Online multiplayer chess platform for playing chess with friends.",
+    url: "https://github.com/dotnize/chessu",
+    image: "/images/chessu.webp",
+  },
+  {
+    title: "prompt-ui",
+    description: "An AI-powered UI generator for prototyping simple web pages.",
+    url: "https://prompt-ui.nize.ph",
+    image: "/images/prompt-ui.webp",
+  },
+  {
+    title: "Mugnavo",
+    description: "An open-source collective of developers and designers.",
+    url: "https://mugnavo.com/",
+    image: "/images/mugnavo.webp",
+  },
+  // {
+  //   title: "Varo",
+  //   description: "The AI-powered matchmaking platform for developers and indie founders.",
+  //   url: "https://varo.dev/",
+  //   image: "/images/project-two.jpg",
+  // }
+];
 
-const latestPost = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-)[0];
+const latestPosts = (await getCollection("posts"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3); // last 2 posts only
 ---
 
-<BaseLayout>
-  <div class="flex w-full flex-col gap-32 pt-16">
-    <div class="flex w-full flex-col items-center gap-6">
-      <div
-        class="text-gruvbox-fg dark:text-gruvboxDark-fg group flex flex-col items-center justify-center gap-5"
-      >
-        <Image
-          src="/images/nize.webp"
-          alt="nize's avatar"
-          width={80}
-          height={80}
-          loading="eager"
-          class="nb-shadow-on border-gruvbox-fg bg-gruvbox-bg transition-shape rounded-xs border duration-200 group-hover:shadow-none dark:rounded-[40px] dark:border-none dark:shadow-none dark:group-hover:-translate-y-1"
-        />
-        <span
-          class="font-azeret border-gruvbox-fg animate-blink dark:border-gruvboxDark-fg border-r-18 pr-4 text-3xl leading-8"
-        >
-          <span class="text-gruvbox-aqua dark:text-gruvboxDark-aqua2">&gt;</span> nize
-        </span>
+<PageLayout>
+  <main class="mt-4 space-y-24">
+    <div class="space-y-10">
+      <div class="space-y-4">
+        <h1 class="text-foreground-highlight text-6xl font-black sm:text-7xl">nize</h1>
+
+        <h2 class="text-lg sm:text-xl">
+          i'm nathaniel, a <span class="text-accent">software engineer</span> and self-proclaimed nerd
+          who loves building stuff on the web.
+        </h2>
       </div>
-      <p class="my-4 max-w-[46ch] text-center font-sans sm:my-1 sm:text-lg">
-        I'm Nathaniel, a software engineer and self-proclaimed nerd who loves building stuff on the
-        web.
-      </p>
-      <div class="mt-2 flex w-full max-w-[18rem] items-center justify-evenly gap-3">
+
+      <div class="flex items-center gap-10">
         <a href="mailto:nat@nize.ph" title="nat@nize.ph">
           <IconEmail
-            class="text-gruvbox-yellow size-6 transition-transform duration-200 hover:scale-110"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
         <a
@@ -65,7 +72,7 @@ const latestPost = (await getCollection("blog")).sort(
           rel="noopener noreferrer"
         >
           <IconGitHub
-            class="text-gruvbox-fg0 dark:text-gruvboxDark-fg0 size-6 transition-transform duration-200 hover:scale-110"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
         <a
@@ -75,7 +82,7 @@ const latestPost = (await getCollection("blog")).sort(
           rel="noopener noreferrer"
         >
           <IconX
-            class="text-gruvbox-fg0 dark:text-gruvboxDark-fg0 size-6 transition-transform duration-200 hover:scale-110"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
         <a
@@ -85,112 +92,56 @@ const latestPost = (await getCollection("blog")).sort(
           rel="noopener noreferrer"
         >
           <IconLinkedIn
-            class="text-gruvbox-blue size-6 transition-transform duration-200 hover:scale-110"
+            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
         </a>
       </div>
     </div>
-    <div class="mt-4 mb-12 flex flex-col gap-4">
-      <Cmd>featured --stuff</Cmd>
-      <div class="flex w-full flex-wrap justify-center gap-4 sm:px-4">
-        <IntroCard {...featuredProject}>
-          <div slot="subtitle">
-            <div class="inline-flex items-center">
-              <IconTools class="size-3" />
-            </div>
-            {" Featured project"}
-          </div>
+    <div class="space-y-4">
+      <div class="flex items-end justify-between">
+        <div class="text-3xl font-bold">
+          <span class="max-sm:hidden">some of my work</span>
+          <span class="sm:hidden">projects</span>
+        </div>
+        <a
+          href="https://github.com/dotnize?tab=repositories&sort=stargazers"
+          title="GitHub repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent inline-flex items-center gap-1 text-sm hover:underline"
+        >
+          more on github <IconLink class="size-4" />
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-x-2 gap-y-3 sm:gap-x-4 sm:gap-y-5">
+        {projects.map((project) => <ProjectCard {...project} />)}
+      </div>
+    </div>
 
-          <a
-            slot="link"
-            href="https://venur.me"
-            class="flex items-center gap-1 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Venur"
-          >
-            <IconLink class="size-4" />
-            venur.me
-          </a>
-
-          <!-- <a
-            slot="link"
-            href="https://github.com/mugnavo/varo.dev"
-            class="flex items-center gap-1 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub repository"
-          >
-            <IconGitHub class="size-4" />
-            GitHub
-          </a> -->
-        </IntroCard>
-        <IntroCard title={latestPost.data.title} description={latestPost.data.description}>
-          <div slot="subtitle">
-            <div class="inline-flex items-center">
-              <IconDocument class="size-3" />
-            </div>
-            {" "}<FormattedDate date={latestPost.data.pubDate} />
-          </div>
-
-          <a
-            slot="link"
-            href={`/blog/${latestPost.id.split("/").pop()}/`}
-            title="Read blog post"
-            class="text-gruvbox-fg3 hover:text-gruvbox-blue dark:text-gruvboxDark-fg4 dark:hover:text-gruvboxDark-blue flex items-center justify-end text-sm font-bold transition-all"
-          >
-            Read post
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="size-5"
+    <div class="space-y-4">
+      <div class="text-3xl font-bold">writing</div>
+      <div class="grid gap-2">
+        {
+          latestPosts.map((post) => (
+            <a
+              class="group flex items-center justify-between"
+              href={`/posts/${post.id.split("/").pop()}/`}
             >
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </a>
-        </IntroCard>
+              <span class="text-foreground group-hover:text-accent font-medium transition-colors duration-200">
+                {post.data.title}
+              </span>
+              <time datetime={post.data.pubDate.toISOString()} class="text-sm max-sm:sr-only">
+                {post.data.pubDate.toLocaleDateString("en-us", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </a>
+          ))
+        }
       </div>
+      <a href="/posts/" class="text-accent text-sm hover:underline"> more posts &rightarrow; </a>
     </div>
-
-    <div class="flex flex-col gap-3">
-      <Cmd>contact --me</Cmd>
-      <a
-        href="/contact/"
-        class="nb-shadow border-gruvbox-fg bg-gruvbox-aqua2 text-gruvbox-bgH dark:hover:bg-gruvbox-aqua ml-2 flex w-fit items-center gap-1 rounded-sm border p-2 font-bold transition-all sm:ml-4 dark:rounded-md dark:border-none dark:shadow-md dark:transition-none dark:hover:text-white"
-      >
-        <IconEmail class="size-5" />
-        Contact me!</a
-      >
-    </div>
-
-    <div class="mb-28 flex w-full flex-col gap-2">
-      <Cmd
-        >webring -n
-        <a
-          class="text-gruvbox-fg0 dark:text-gruvboxDark-fg0 font-medium hover:underline"
-          href="https://webring.antaresph.dev">Pinoy Websites</a
-        >
-      </Cmd>
-      <div
-        class="border-gruvbox-bg2 font-azeret dark:border-gruvboxDark-bg1 ml-2 flex w-fit items-center rounded-md border text-sm font-medium sm:ml-4 sm:text-base"
-      >
-        <a
-          class="hover:bg-gruvbox-bg2 hover:text-gruvbox-fg0 dark:hover:bg-gruvboxDark-bg1 dark:hover:text-gruvboxDark-fg0 p-1.5"
-          href="https://webring.antaresph.dev/previous">&lt; Previous</a
-        >
-        <a
-          class="border-gruvbox-bg2 hover:bg-gruvbox-bg2 hover:text-gruvbox-fg0 dark:border-gruvboxDark-bg1 dark:hover:bg-gruvboxDark-bg1 dark:hover:text-gruvboxDark-fg0 border-x p-1.5 px-2"
-          href="https://webring.antaresph.dev/random">Random</a
-        >
-        <a
-          class="hover:bg-gruvbox-bg2 hover:text-gruvbox-fg0 dark:hover:bg-gruvboxDark-bg1 dark:hover:text-gruvboxDark-fg0 p-1.5"
-          href="https://webring.antaresph.dev/next">Next &gt;</a
-        >
-      </div>
-    </div>
-  </div>
-</BaseLayout>
+  </main>
+</PageLayout>

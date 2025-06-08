@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<header class="flex items-center justify-between pt-24">
+  <a
+    href="/"
+    class="macchiato:rounded-[22px] bg-pfp macchiato:hover:-translate-y-1 transition-[border-radius,translate] duration-200 dark:rounded-[22px] dark:hover:-translate-y-1"
+  >
+    <Image
+      src="/images/nize.webp"
+      alt="nize's avatar"
+      width={44}
+      height={44}
+      loading="eager"
+      decoding="async"
+      class="macchiato:rounded-[22px] macchiato:outline-0 outline-foreground nb-shadow-on macchiato:shadow-none rounded-md outline-1 transition-[border-radius,box-shadow] duration-200 hover:shadow-none dark:rounded-[22px] dark:shadow-none dark:outline-0"
+    />
+  </a>
+  <nav>
+    <ul class="flex items-center gap-4">
+      <li><a href="/" class="hover:text-accent transition-colors">home</a></li>
+      <li><a href="/posts/" class="hover:text-accent transition-colors">posts</a></li>
+      <li class="ml-0.5">
+        <ThemeToggle />
+      </li>
+    </ul>
+  </nav>
+</header>

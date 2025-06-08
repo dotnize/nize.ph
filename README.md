@@ -1,25 +1,16 @@
 # [nize.ph](https://nize.ph)
 
-My personal site built with Astro and Solid.
-
-Styled with Tailwind CSS and the gruvbox color scheme.
+My personal site built with Astro and Tailwind CSS.
 
 ## Development
 
 ```sh
 # install dependencies
-pnpm install # or npm install
+pnpm install
 
 # start local dev server
-pnpm start # or npm start
+pnpm start
 
 # build for production (configured for Vercel)
-pnpm build # or npm run build
-```
-
-Environment variables
-
-```env
-# for contact form
-DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+pnpm build
 ```

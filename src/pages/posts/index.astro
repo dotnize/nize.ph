@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "~/layouts/PageLayout.astro";
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<PageLayout title="Posts">
+  <div class="space-y-6 pt-4">
+    <h1 class="text-2xl font-bold sm:text-3xl">Posts</h1>
+    <section>
+      <ul class="flex flex-col">
+        {
+          posts.map((post) => (
+            <li class="flex w-full flex-wrap gap-2 md:flex-nowrap md:gap-4">
+              <div class="flex w-[20ch] gap-2 text-sm">
+                <span class="text-foreground/90 md:mt-1">
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {post.data.pubDate.toLocaleDateString("en-us", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </span>
+              </div>
+              <a
+                href={`/posts/${post.id.split("/").pop()}/`}
+                class="group relative mb-14 flex w-full flex-col gap-2"
+              >
+                <span class="group-hover:text-accent text-lg font-semibold transition-all">
+                  {post.data.title}
+                </span>
+                <span class="text-foreground/90 h-full text-sm">{post.data.description}</span>
+                <div class="macchiato:border-foreground/20 border-foreground/40 dark:border-foreground/20 absolute top-4 hidden h-full w-full scale-y-75 border-b opacity-0 transition-all group-hover:scale-y-100 group-hover:opacity-100 md:block" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</PageLayout>
