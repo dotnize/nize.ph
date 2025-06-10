@@ -1,0 +1,35 @@
+---
+interface Props {
+  variant?: "tip" | "caution" | "danger" | "note";
+  title?: string;
+}
+
+const { variant = "note", title } = Astro.props as Props;
+---
+
+<div
+  class:list={[
+    "aside prose-p:my-0 my-3 rounded-md border-l-4 p-4",
+    {
+      "prose-code:bg-green-400/20 macchiato:text-green-50 border-green-400/50 bg-green-400/15 text-green-950 dark:text-green-50":
+        variant === "tip",
+    },
+    {
+      "prose-code:bg-yellow-400/20 macchiato:text-yellow-50 border-yellow-400/50 bg-yellow-400/15 text-yellow-950 dark:text-yellow-50":
+        variant === "caution",
+    },
+    {
+      "prose-code:bg-red-400/20 macchiato:text-red-50 border-red-400/50 bg-red-400/15 text-red-950 dark:text-red-50":
+        variant === "danger",
+    },
+    {
+      "prose-code:bg-sky-400/20 macchiato:text-sky-50 border-sky-400/50 bg-sky-400/15 text-sky-950 dark:text-sky-50":
+        variant === "note",
+    },
+  ]}
+>
+  <div class="flex items-center gap-2 pb-2">
+    <p class="text-sm font-bold">{title || variant.toUpperCase()}</p>
+  </div>
+  <slot />
+</div>
