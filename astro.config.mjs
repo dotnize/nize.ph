@@ -23,7 +23,7 @@ export default defineConfig({
     // solidJs(),
   ],
   output: "static",
-  adapter: vercel(),
+  adapter: vercel({ webAnalytics: { enabled: false } }),
   prefetch: {
     prefetchAll: true,
   },

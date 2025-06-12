@@ -1,4 +1,5 @@
 ---
+import Analytics from "@vercel/analytics/astro";
 import { Font } from "astro:assets";
 import "./base.css";
 
@@ -75,5 +76,7 @@ const fullTitle = `${title} - ${SITE_TITLE}`;
   </head>
   <body class="bg-background text-foreground font-main">
     <slot />
+
+    <Analytics />
   </body>
 </html>
