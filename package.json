@@ -17,10 +17,10 @@
     "@astrojs/sitemap": "^3.4.1",
     "@astrojs/vercel": "^8.1.5",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.2",
     "astro-expressive-code": "^0.41.2",
-    "tailwindcss": "^4.1.8",
+    "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
