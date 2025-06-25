@@ -20,13 +20,13 @@ const { title, description, image, url } = Astro.props;
 >
   <div class="relative">
     <div
-      class="absolute z-10 flex size-full flex-col items-center rounded-xl bg-black/20 opacity-0 transition-opacity duration-200 group-hover:opacity-80"
+      class="absolute z-10 flex size-full flex-col items-center rounded-xl bg-black/30 opacity-0 transition-opacity duration-200 group-hover:opacity-70"
     >
       <IconLink class="my-auto size-8 stroke-4 text-white" />
     </div>
     <Image
       src={image || "https://placehold.co/300x200"}
-      alt="Project Image"
+      alt={title}
       width={300}
       height={200}
       loading="eager"

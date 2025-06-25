@@ -61,6 +61,7 @@ const latestPosts = (await getCollection("posts"))
 
       <div class="flex items-center gap-10">
         <a href="mailto:nat@nize.ph" title="nat@nize.ph">
+          <span class="sr-only">Email</span>
           <IconEmail
             class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
@@ -71,6 +72,7 @@ const latestPosts = (await getCollection("posts"))
           target="_blank"
           rel="noopener noreferrer"
         >
+          <span class="sr-only">dotnize on GitHub</span>
           <IconGitHub
             class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
@@ -81,6 +83,7 @@ const latestPosts = (await getCollection("posts"))
           target="_blank"
           rel="noopener noreferrer"
         >
+          <span class="sr-only">dotnize on X</span>
           <IconX
             class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
@@ -91,6 +94,7 @@ const latestPosts = (await getCollection("posts"))
           target="_blank"
           rel="noopener noreferrer"
         >
+          <span class="sr-only">nize on LinkedIn</span>
           <IconLinkedIn
             class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
           />
@@ -124,9 +128,12 @@ const latestPosts = (await getCollection("posts"))
         {
           latestPosts.map((post) => (
             <a
-              class="group flex items-center justify-between"
+              class="group relative flex items-center justify-between"
               href={`/posts/${post.id.split("/").pop()}/`}
             >
+              <span class="text-accent absolute -left-6 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                &rightarrow;
+              </span>
               <span class="text-foreground group-hover:text-accent font-medium transition-colors duration-200">
                 {post.data.title}
               </span>

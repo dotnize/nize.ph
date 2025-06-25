@@ -50,8 +50,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     </article>
 
     <button
-      class="text-accent cursor-pointer hover:underline"
-      onclick={"window.scrollTo({ top: 0, behavior: 'smooth' })"}>&uparrow; back to top</button
+      class="text-accent group cursor-pointer"
+      onclick={"window.scrollTo({ top: 0, behavior: 'smooth' })"}
+      >&uparrow; <span class="group-hover:underline">back to top</span></button
     >
   </div>
 </PageLayout>
