@@ -18,7 +18,7 @@ const pageImage = image || (title !== "404" ? "/images/cover.jpg" : undefined);
 <Base title={title} description={description} image={pageImage}>
   <div class="mx-auto max-w-prose space-y-2 px-4">
     <Header />
-    <div class="min-h-[60vh]">
+    <div class="min-h-[calc(100vh-28rem)]">
       <slot />
     </div>
     <Footer />
