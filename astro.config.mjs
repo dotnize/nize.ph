@@ -18,7 +18,9 @@ export default defineConfig({
     }),
     mdx(),
     sitemap({
-      filter: (page) => !page.startsWith("https://nize.ph/blog"),
+      filter: (page) =>
+        !page.startsWith("https://nize.ph/blog") &&
+        !page.startsWith("https://nize.ph/posts/tanstack-start-websockets"),
     }),
     // solidJs(),
   ],
