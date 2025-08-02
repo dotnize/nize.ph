@@ -43,7 +43,6 @@ const projects = [
 ];
 
 const latestPosts = (await getCollection("posts"))
-  .filter((post) => !post.data.unlisted) // filter out unlisted posts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3); // last 2 posts only
 ---
