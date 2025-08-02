@@ -1,6 +1,6 @@
 export const SITE_TITLE = "nize";
 export const SITE_DESCRIPTION =
-  "A software engineer and open-source enthusiast from the Philippines who loves delivering products that excel in both quality and scalability.";
+  "Software engineer & full-stack web developer from the Philippines building products that excel in quality and innovation.";
 
 export interface LayoutProps {
   title?: string;
