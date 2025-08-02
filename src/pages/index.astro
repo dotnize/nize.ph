@@ -43,6 +43,7 @@ const projects = [
 ];
 
 const latestPosts = (await getCollection("posts"))
+  .filter((post) => !post.data.unlisted) // filter out unlisted posts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3); // last 2 posts only
 ---
@@ -53,10 +54,12 @@ const latestPosts = (await getCollection("posts"))
       <div class="space-y-4">
         <h1 class="text-foreground-highlight text-6xl font-black sm:text-7xl">nize</h1>
 
-        <h2 class="text-lg sm:text-xl">
-          i'm nathaniel, a <span class="text-accent">software engineer</span> and self-proclaimed nerd
-          who loves building stuff on the web.
-        </h2>
+        <p class="text-lg sm:text-xl">
+          i'm nathaniel, a <span class="text-accent">software engineer</span>
+          who loves building stuff on the web — specializing in <span class="text-accent"
+            >TypeScript</span
+          > technologies like React, Vue, Next.js, and TanStack.
+        </p>
       </div>
 
       <div class="flex items-center gap-10">
