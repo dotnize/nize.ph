@@ -8,7 +8,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deps": "pnpm dlx taze@latest -Ilw",
+    "deps:major": "pnpm dlx taze@latest major -Ilw"
   },
   "lint-staged": {
     "*": "prettier --ignore-unknown --write"
@@ -29,7 +31,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.2",
+    "lint-staged": "^16.1.4",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-organize-imports": "^4.2.0",
