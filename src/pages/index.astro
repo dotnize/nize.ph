@@ -106,8 +106,8 @@ const latestPosts = (await getCollection("posts"))
     <div class="space-y-4">
       <div class="flex items-end justify-between">
         <div class="text-3xl font-bold">
-          <span class="max-sm:hidden">some of my work</span>
-          <span class="sm:hidden">projects</span>
+          <h2 class="max-sm:hidden">some of my work</h2>
+          <h2 class="sm:hidden">projects</h2>
         </div>
         <a
           href="https://github.com/dotnize?tab=repositories&sort=stargazers"
@@ -125,7 +125,7 @@ const latestPosts = (await getCollection("posts"))
     </div>
 
     <div class="space-y-4">
-      <div class="text-3xl font-bold">writing</div>
+      <h2 class="text-3xl font-bold">writing</h2>
       <div class="grid gap-2">
         {
           latestPosts.map((post) => (
