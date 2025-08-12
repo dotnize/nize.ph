@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import { type CollectionEntry } from "astro:content";
 import PageLayout from "./PageLayout.astro";
-type Props = CollectionEntry<"posts">["data"];
+type Props = CollectionEntry<"notes">["data"];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 

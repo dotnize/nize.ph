@@ -36,9 +36,9 @@ const projects = [
   },
 ];
 
-const latestPosts = (await getCollection("posts"))
+const latestNotes = (await getCollection("notes"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3); // last 2 posts only
+  .slice(0, 3); // last 3 notes only
 ---
 
 <PageLayout>
@@ -121,19 +121,19 @@ const latestPosts = (await getCollection("posts"))
       <h2 class="text-3xl font-bold">writing</h2>
       <div class="grid gap-2">
         {
-          latestPosts.map((post) => (
+          latestNotes.map((note) => (
             <a
               class="group relative flex items-center justify-between"
-              href={`/posts/${post.id.split("/").pop()}/`}
+              href={`/${note.id.split("/").pop()}/`}
             >
               <span class="text-accent absolute -left-6 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                 &rightarrow;
               </span>
               <span class="text-foreground group-hover:text-accent font-medium transition-colors duration-200">
-                {post.data.title}
+                {note.data.title}
               </span>
-              <time datetime={post.data.pubDate.toISOString()} class="text-sm max-sm:sr-only">
-                {post.data.pubDate.toLocaleDateString("en-us", {
+              <time datetime={note.data.pubDate.toISOString()} class="text-sm max-sm:sr-only">
+                {note.data.pubDate.toLocaleDateString("en-us", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
@@ -143,7 +143,28 @@ const latestPosts = (await getCollection("posts"))
           ))
         }
       </div>
-      <a href="/posts/" class="text-accent text-sm hover:underline"> more posts &rightarrow; </a>
+      <a href="/notes/" class="text-accent text-sm hover:underline"> more notes &rightarrow; </a>
+    </div>
+
+    <div class="space-y-3">
+      <h2 class="mb-4 text-3xl font-bold">webring</h2>
+      <p>
+        this website is part of the
+        <a href="https://webring.antaresph.dev/" class="text-accent group">
+          🇵🇭 <span class="group-hover:underline">Pinoy Websites Webring</span>
+        </a>
+      </p>
+      <div class="space-x-4 text-sm">
+        <a class="text-accent group" href="https://webring.antaresph.dev/previous">
+          &longleftarrow; <span class="group-hover:underline">previous</span>
+        </a>
+        <a class="text-accent group" href="https://webring.antaresph.dev/random">
+          &leftrightharpoons; <span class="group-hover:underline">random</span>
+        </a>
+        <a class="text-accent group" href="https://webring.antaresph.dev/next">
+          <span class="group-hover:underline">next</span> &longrightarrow;
+        </a>
+      </div>
     </div>
   </main>
 </PageLayout>

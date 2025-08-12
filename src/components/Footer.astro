@@ -1,7 +1,26 @@
-<footer class="mt-24 mb-16">
-  <a class="group select-none" href="mailto:nat@nize.ph">
-    <div>let's work together</div>
-    <span class="text-accent">&rightarrow;</span>
-    <span class="text-accent select-all group-hover:underline" title="Email">nat@nize.ph</span>
-  </a>
+---
+import IconEmail from "~/components/icons/IconEmail.astro";
+import IconPhone from "./icons/IconPhone.astro";
+---
+
+<footer class="mt-24 mb-16 select-none">
+  <div>let's work together</div>
+
+  <div>
+    <a class="text-accent group" href="mailto:nat@nize.ph" title="Email">
+      <IconEmail class="inline size-4" />
+      <span class="select-all group-hover:underline">nat@nize.ph</span>
+    </a>
+    <span>&ThinSpace;or&ThinSpace;</span>
+    <a
+      class="text-accent group"
+      title="Book a call on Cal.com"
+      href="https://cal.com/mugnavo"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <IconPhone class="inline size-4" />
+      <span class="group-hover:underline">book a call</span>
+    </a>
+  </div>
 </footer>

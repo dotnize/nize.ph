@@ -2,7 +2,6 @@ import { defineConfig, fontProviders } from "astro/config";
 
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-// import solidJs from "@astrojs/solid-js";
 import expressiveCode from "astro-expressive-code";
 
 import vercel from "@astrojs/vercel";
@@ -17,12 +16,7 @@ export default defineConfig({
       themeCssSelector: (theme) => `.${theme.name.split("-").at(-1)}`,
     }),
     mdx(),
-    sitemap({
-      filter: (page) =>
-        !page.startsWith("https://nize.ph/blog") &&
-        !page.startsWith("https://nize.ph/posts/tanstack-start-websockets"),
-    }),
-    // solidJs(),
+    sitemap(),
   ],
   output: "static",
   adapter: vercel({ webAnalytics: { enabled: false } }),
