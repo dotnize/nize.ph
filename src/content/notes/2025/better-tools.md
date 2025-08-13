@@ -4,7 +4,7 @@ pubDate: "August 12 2025"
 description: "Thoughts on the AI hype and embracing innovation."
 ---
 
-For years, I’ve been comfortable with the traditional developer grind: Googling errors, digging through Stack Overflow, reading docs, trying, failing, and trying again. That process shaped how I learned to build.
+For years, I’ve been comfortable with the traditional developer grind: Googling errors, digging through Stack Overflow, reading docs, trying, failing, and trying again. That process shaped how many of us learned to build.
 
 When AI tools and “vibe coding” started trending, I remained skeptical. There was a trend of people using AI to blindly generate features, often leading to buggy, [insecure products](https://www.reddit.com/r/LocalLLaMA/comments/1jdpt2t/when_vibe_coding_no_longer_vibes_back/). I do use it to some extent, as an autocomplete on steroids or a quicker search engine, but I never trusted it to build entire features or products.
 
