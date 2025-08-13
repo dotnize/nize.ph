@@ -8,6 +8,7 @@ import IconLinkedIn from "~/components/icons/IconLinkedIn.astro";
 import IconX from "~/components/icons/IconX.astro";
 import ProjectCard from "~/components/ProjectCard.astro";
 import PageLayout from "~/layouts/PageLayout.astro";
+import IconFlagPh from "~/components/icons/IconFlagPh.astro";
 
 const projects = [
   {
@@ -151,7 +152,8 @@ const latestNotes = (await getCollection("notes"))
       <p>
         this website is part of the
         <a href="https://webring.antaresph.dev/" class="text-accent group">
-          🇵🇭 <span class="group-hover:underline">Pinoy Websites Webring</span>
+          <IconFlagPh class="inline size-4" />
+          <span class="group-hover:underline">Pinoy Websites Webring</span>
         </a>
       </p>
       <div class="space-x-4 text-sm">
