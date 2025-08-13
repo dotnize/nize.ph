@@ -16,7 +16,10 @@ export default defineConfig({
       themeCssSelector: (theme) => `.${theme.name.split("-").at(-1)}`,
     }),
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) =>
+        !page.startsWith("https://nize.ph/blog") && !page.startsWith("https://nize.ph/posts"),
+    }),
   ],
   output: "static",
   adapter: vercel({ webAnalytics: { enabled: false } }),
