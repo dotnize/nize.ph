@@ -14,7 +14,7 @@ I thought I had the edge: a deeper understanding of my codebases, cleaner archit
 
 Over time, the ecosystem has simply gotten better. Tools like [MCPs](https://modelcontextprotocol.io/introduction), platforms like [n8n](https://n8n.io/), and better [AI agents](https://leerob.com/agents) are enabling actual engineers to build fast with enough supervision to ensure quality. These aren’t just [prompt monkeys](https://epium.com/blog/were-raising-prompt-monkeys-not-engineers/) shipping broken products. These are [thoughtful builders](https://spiess.dev/blog/how-i-use-claude-code) using better tools to augment their speed and scale.
 
-What felt like hype can now translate into practical leverage: faster iteration with guardrails, less glue work, and a higher baseline of quality. I can still build it the long way — others just ship the same outcomes much sooner.
+What felt like hype can now translate into practical leverage: faster iteration with guardrails, less glue work, and a higher baseline of quality. We can still take the traditional route to build things — but others now deliver the same results much faster, with quality that's often on par.
 
 ## Better tools
 
@@ -22,6 +22,8 @@ This isn't just about AI. We've seen similar resistance with developers [rejecti
 
 Better tools lead to better products. They raise the floor on quality, cut cycle time, and reduce errors. You still need judgment, but you spend less time on glue work.
 
-Used thoughtfully, good tooling doesn’t replace good engineering — it amplifies it. We still need to stay critical of hype and limitations, but that shouldn't stop us from recognizing innovation when it’s real.
+Used thoughtfully, good tooling doesn’t replace good engineering — it amplifies it. But without [care and skill](https://linear.app/now/why-is-quality-so-rare), even the best tools can’t save a sloppy product.
+
+We still need to stay critical of hype and limitations, but that shouldn't stop us from recognizing innovation when it’s real.
 
 We need better tools. I'm [learning to embrace them](https://zed.dev/agentic-engineering).
