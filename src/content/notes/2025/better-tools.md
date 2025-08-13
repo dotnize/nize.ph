@@ -20,7 +20,7 @@ What felt like hype can now translate into practical leverage: faster iteration 
 
 This isn't just about AI. We've seen similar resistance with developers [rejecting tools](https://www.reddit.com/r/ExperiencedDevs/comments/1ltjgup/teams_refusing_to_use_modern_tools/) like modern frameworks in favor of vanilla JS, ORMs in favor of raw SQL, or infrastructure tools like Terraform and Docker in favor of manually managing deployments via SSH and handwritten scripts. Not because they’ve weighed the tradeoffs, but because they believe the hard or traditional way is [the right way](https://www.gapingvoid.com/the-right-way-is-the-hard-way/). But convenience isn’t the enemy; complexity for its own sake is. At some point, the goal should also be leverage, not just mastery.
 
-Better tools lead to better products. They raise the floor on quality, cut cycle time, and reduce errors. You still need judgment, but you spend less time on glue work.
+Better tools can lead to better products. They raise the floor on quality, cut cycle time, and reduce errors. You still need judgment, but you spend less time on glue work.
 
 Used thoughtfully, good tooling doesn’t replace good engineering — it amplifies it. But without [care and skill](https://linear.app/now/why-is-quality-so-rare), even the best tools can’t save a sloppy product.
 
