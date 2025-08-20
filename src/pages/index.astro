@@ -37,7 +37,7 @@ const projects = [
   },
 ];
 
-const latestNotes = (await getCollection("notes"))
+const latestNotes = (await getCollection("notes", (note) => !note.id.startsWith("vault/")))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3); // last 3 notes only
 ---
