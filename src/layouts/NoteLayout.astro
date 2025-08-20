@@ -14,9 +14,9 @@ const { title, description, pubDate, updatedDate, heroImage, vault } = Astro.pro
 <PageLayout title={title} description={description} image={heroImage}>
   <div class="mt-8 mb-4 space-y-8">
     <article>
-      <div class="flex flex-col gap-1">
-        {
-          !vault && (
+      {
+        !vault && (
+          <div class="flex flex-col gap-1">
             <time datetime={pubDate.toISOString()}>
               {pubDate.toLocaleDateString("en-us", {
                 year: "numeric",
@@ -24,13 +24,32 @@ const { title, description, pubDate, updatedDate, heroImage, vault } = Astro.pro
                 day: "numeric",
               })}
             </time>
-          )
-        }
+
+            {updatedDate && (
+              <div class="text-xs opacity-90">
+                updated on{" "}
+                <time datetime={updatedDate.toISOString()}>
+                  {updatedDate.toLocaleDateString("en-us", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </div>
+            )}
+          </div>
+        )
+      }
+
+      <div class="mt-2 mb-10 flex flex-col gap-1.5">
+        <h1 class="text-3xl font-bold">
+          {title}
+        </h1>
 
         {
-          updatedDate && (
-            <div class={vault ? "text-sm" : "text-xs opacity-90"}>
-              updated on{" "}
+          vault && updatedDate && (
+            <div class="text-sm opacity-90">
+              updated{" "}
               <time datetime={updatedDate.toISOString()}>
                 {updatedDate.toLocaleDateString("en-us", {
                   year: "numeric",
@@ -41,11 +60,6 @@ const { title, description, pubDate, updatedDate, heroImage, vault } = Astro.pro
             </div>
           )
         }
-      </div>
-      <div class="mt-2 mb-10 flex flex-col gap-1">
-        <h1 class="text-3xl font-bold">
-          {title}
-        </h1>
         {
           heroImage && (
             <Image width={720} height={360} src={heroImage} alt="" class="rounded-md shadow-md" />
