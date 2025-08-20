@@ -1,7 +1,7 @@
 ---
 title: "Bookmarks"
 pubDate: "August 20 2025"
-# updatedDate: "August 20 2025"
+updatedDate: "August 20 2025"
 description: "A collection of links I find interesting."
 ---
 
