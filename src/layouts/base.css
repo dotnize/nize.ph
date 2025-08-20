@@ -28,7 +28,7 @@
   --tw-prose-links: var(--color-accent);
   --tw-prose-bold: var(--color-foreground-highlight);
   --tw-prose-counters: color-mix(in oklab, var(--color-foreground) 96%, transparent);
-  --tw-prose-bullets: color-mix(in oklab, var(--color-foreground) 10%, transparent);
+  --tw-prose-bullets: color-mix(in oklab, var(--color-foreground) 70%, transparent);
   --tw-prose-hr: color-mix(in oklab, var(--color-foreground) 10%, transparent);
   --tw-prose-quotes: color-mix(in oklab, var(--color-foreground) 98%, transparent);
   --tw-prose-quote-borders: color-mix(in oklab, var(--color-foreground) 10%, transparent);

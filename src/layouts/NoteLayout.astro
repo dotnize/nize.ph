@@ -2,8 +2,13 @@
 import { Image } from "astro:assets";
 import { type CollectionEntry } from "astro:content";
 import PageLayout from "./PageLayout.astro";
-type Props = CollectionEntry<"notes">["data"];
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+type CollectionData = CollectionEntry<"notes">["data"];
+
+interface Props extends CollectionData {
+  vault: boolean;
+}
+const { title, description, pubDate, updatedDate, heroImage, vault } = Astro.props;
 ---
 
 <PageLayout title={title} description={description} image={heroImage}>
@@ -49,10 +54,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       </div>
     </article>
 
-    <button
-      class="text-accent group cursor-pointer"
-      onclick={"window.scrollTo({ top: 0, behavior: 'smooth' })"}
-      >&uparrow; <span class="group-hover:underline">back to top</span></button
-    >
+    {
+      vault ? undefined : (
+        <button
+          class="text-accent group cursor-pointer"
+          onclick={"window.scrollTo({ top: 0, behavior: 'smooth' })"}
+        >
+          &uparrow; <span class="group-hover:underline">back to top</span>
+        </button>
+      )
+    }
   </div>
 </PageLayout>

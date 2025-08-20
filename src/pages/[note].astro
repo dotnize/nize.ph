@@ -14,6 +14,6 @@ const { note } = Astro.props;
 const { Content } = await render(note);
 ---
 
-<NoteLayout {...note.data}>
+<NoteLayout {...note.data} vault={note.id.startsWith("vault/")}>
   <Content />
 </NoteLayout>
