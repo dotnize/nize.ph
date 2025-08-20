@@ -1,12 +1,12 @@
 ---
 title: "Better Tools"
-pubDate: "August 12 2025"
+pubDate: "August 17 2025"
 description: "Thoughts on the AI hype and embracing innovation."
 ---
 
 For years, I’ve been comfortable with the traditional developer grind: Googling errors, digging through Stack Overflow, reading docs, trying, failing, and trying again. That process shaped how many of us learned to build.
 
-When AI tools and “vibe coding” started trending, I remained skeptical. There was a trend of people using AI to blindly generate features, often leading to buggy, [insecure products](https://www.reddit.com/r/LocalLLaMA/comments/1jdpt2t/when_vibe_coding_no_longer_vibes_back/). I do use it to some extent, as an autocomplete on steroids or a quicker search engine, but I never trusted it to build entire features or products.
+When AI tools and “vibe coding” started trending, I remained skeptical (I still am). There's a trend of people using AI to blindly generate features, often leading to buggy, [insecure products](https://www.reddit.com/r/LocalLLaMA/comments/1jdpt2t/when_vibe_coding_no_longer_vibes_back/). I do use it to some extent, as an autocomplete on steroids or a quicker search engine, but I would not trust it to build entire features or products.
 
 I thought I had the edge: a deeper understanding of my codebases, cleaner architecture, better control. But not quite. Technical depth is very important, but I underestimated the value of speed and productivity.
 
@@ -14,7 +14,7 @@ I thought I had the edge: a deeper understanding of my codebases, cleaner archit
 
 Over time, the ecosystem has simply gotten better. Tools like [MCPs](https://modelcontextprotocol.io/introduction) and better [AI agents](https://leerob.com/agents) are enabling actual engineers to build fast with enough supervision to ensure quality. These aren’t just [prompt monkeys](https://epium.com/blog/were-raising-prompt-monkeys-not-engineers/) shipping broken products. These are [thoughtful builders](https://spiess.dev/blog/how-i-use-claude-code) using better tools to augment their speed and scale.
 
-What felt like hype can now translate into practical leverage: faster iteration with guardrails, less glue work, and a higher baseline of quality. We can still take the traditional route to build things — but others now deliver the same results much faster, with quality that's often on par.
+With the right tools and skills, what felt like hype can now translate into practical leverage: faster iteration with guardrails, less glue work, and a higher baseline of quality. We can still take the traditional route to build things — but others now deliver the same results much faster, with quality that's often on par.
 
 ## Better tools
 
