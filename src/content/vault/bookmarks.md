@@ -19,6 +19,7 @@ A collection of links I find interesting.
 - [Startup Slop](https://jihad.house/notes/startup-slop/)
 - [Super Specific Feedback](https://newsletter.weskao.com/p/super-specific-feedback)
 
-## code
+## tech
 
+- [oss/acc](https://ossacc.com/)
 - [Write code that is easy to delete, not easy to extend.](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to)
