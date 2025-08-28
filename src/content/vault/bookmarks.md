@@ -9,7 +9,6 @@ a collection of links i find interesting.
 
 ## life
 
-- [Does It Spark Joy?](https://www.no.lol/2020-01-17-does-it-spark-joy/)
 - [Hell Yeah or No](https://sive.rs/n)
 - [The Evolution of Trust](http://ncase.me/trust/)
 - [You can have two Big Things, but not three](https://longform.asmartbear.com/two-big-things/)
