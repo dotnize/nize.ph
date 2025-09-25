@@ -18,7 +18,7 @@ One of my favorite articulations comes from Anthony Fu. In his [post on sponsors
 
 > Does everyone do open source completely selflessly? I doubt that. But does that mean everyone is doing it solely for their own benefit? I don’t believe that either. The beauty of open source lies in its non-zero-sum nature, where maintainers can derive benefits such as a sense of accomplishment, skill improvement, recognition, and reputation, while providing value to benefit the entire world.
 
-That’s the part I love most. Open source is not charity, but a non-zero-sum game where everyone can win. Unlike physical resources, code and knowledge can be shared infinitely without loss. When someone improves an open-source tool, everyone benefits from that improvement.
+That’s the part I love most. Open source is not charity, but a [non-zero-sum game](https://nonzerosum.games/whatarenonzerosumgames.html) where everyone can win. Unlike physical resources, code and knowledge can be shared infinitely without loss. When someone improves an open-source tool, everyone benefits from that improvement.
 
 ## Why should we care?
 
