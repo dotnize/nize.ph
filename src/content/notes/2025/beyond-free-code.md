@@ -24,17 +24,13 @@ That’s the part I love most. Open source is not charity, but a [non-zero-sum g
 
 If you’re reading this, chances are you’re already using open source every single day — in your tools, your apps, even the operating systems powering your devices. Beyond the practical benefits, open source embodies deeper values that matter to all of us:
 
-- **Openness and Transparency**
+- **Openness, Transparency, and Security**
 
-  Anyone can see the code. That means no hidden tricks, no black boxes. This openness helps us trust the software we rely on.
-
-- **Shared Security**
-
-  Thousands of eyes looking at the same code means bugs and vulnerabilities are spotted and fixed faster. Together, we build stronger, safer systems.
+  Transparent and open code allows anyone to spot issues and implement improvements quickly. This openness helps us trust the software we rely on.
 
 - **Collaboration and Community**
 
-  Open source is about more than just code. It’s about sharing, collaboration, and giving back. It feels less like consuming and more like contributing to something bigger.
+  Open source is more than just code. It’s a loop of collaboration and giving back, where each small contribution adds up so everyone can win.
 
 - **Faster Innovation**
 
