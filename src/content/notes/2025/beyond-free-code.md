@@ -14,7 +14,7 @@ People often think open source is just "free software" you download. But there's
 
 ## A non-zero-sum game
 
-One of my favorite articulations comes from Anthony Fu. In his [post on sponsorship forwarding,](https://antfu.me/posts/sponsorship-forwarding#why-am-i-doing-this) he writes:
+One of my favorite articulations comes from Anthony Fu. In his [post on sponsorship forwarding](https://antfu.me/posts/sponsorship-forwarding#why-am-i-doing-this), he writes:
 
 > Does everyone do open source completely selflessly? I doubt that. But does that mean everyone is doing it solely for their own benefit? I don’t believe that either. The beauty of open source lies in its non-zero-sum nature, where maintainers can derive benefits such as a sense of accomplishment, skill improvement, recognition, and reputation, while providing value to benefit the entire world.
 
