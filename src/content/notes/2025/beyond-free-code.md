@@ -25,6 +25,8 @@ One of my favorite articulations comes from Anthony Fu. In his [post on sponsors
 
 That’s the part I love most. Open source is not charity, but a [non-zero-sum game](https://nonzerosum.games/whatarenonzerosumgames.html) where everyone can win. Unlike physical resources, code and knowledge can be shared infinitely without loss. When someone improves an open-source tool, everyone benefits from that improvement.
 
+![Non-zero-sum game](/images/non-zero-sum.webp)
+
 ## Why should we care?
 
 If you’re reading this, chances are you’re already using open source every single day — in your tools, your apps, even the operating systems powering your devices. Beyond the practical benefits, open source embodies deeper values that matter to all of us:
