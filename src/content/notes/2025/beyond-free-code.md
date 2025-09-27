@@ -6,6 +6,11 @@ description: "On the beauty of non-zero-sum collaboration, and why open source d
 
 October is coming, and with it [Hacktoberfest](https://hacktoberfest.com/about/), a yearly celebration of open source. As a developer who has learned and grown a lot thanks to open-source communities, I want to share why I think it matters and why we should care more about it.
 
+<figure>
+  <img src="https://imgs.xkcd.com/comics/dependency.png" alt="xkcd: Dependency" />
+  <figcaption><a href="https://xkcd.com/2347/">xkcd: Dependency</a></figcaption>
+</figure>
+
 ## The backbone of tech
 
 While technologies like blockchain and AI are making headlines today, open source has quietly powered much of our digital world for decades, forming the foundation of almost everything we use in tech today. Yet, despite being so essential, it often feels underappreciated and underfunded.
