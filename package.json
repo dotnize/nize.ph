@@ -18,16 +18,16 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
-    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/vercel": "^9.0.2",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.18",
     "@vercel/analytics": "^1.6.1",
-    "astro": "^5.16.4",
-    "astro-expressive-code": "^0.41.3",
-    "tailwindcss": "^4.1.17",
+    "astro": "^5.16.6",
+    "astro-expressive-code": "^0.41.5",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
