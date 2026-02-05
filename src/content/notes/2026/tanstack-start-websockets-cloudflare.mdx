@@ -153,6 +153,17 @@ export default createServerEntry({
 });
 ```
 
+Then update the Wrangler config to use the custom server entry:
+
+```diff
+// wrangler.jsonc
+{
+  // ...
+- "main": "@tanstack/react-start/server-entry",
++ "main": "src/server.ts",
+}
+```
+
 ## Server route: forward the upgrade
 
 Now we need an endpoint that turns `roomId` into a Durable Object instance and forwards the request.
