@@ -22,10 +22,11 @@
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
     "@astrojs/vercel": "^9.0.4",
+    "@expressive-code/plugin-collapsible-sections": "^0.41.6",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "@vercel/analytics": "^1.6.1",
-    "astro": "^5.16.15",
+    "astro": "^5.17.1",
     "astro-expressive-code": "^0.41.6",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"

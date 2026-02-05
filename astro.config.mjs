@@ -2,6 +2,7 @@ import { defineConfig, fontProviders } from "astro/config";
 
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import expressiveCode from "astro-expressive-code";
 
 import vercel from "@astrojs/vercel";
@@ -14,6 +15,7 @@ export default defineConfig({
     expressiveCode({
       themes: ["everforest-light", "everforest-dark", "catppuccin-macchiato"],
       themeCssSelector: (theme) => `.${theme.name.split("-").at(-1)}`,
+      plugins: [pluginCollapsibleSections()],
     }),
     mdx(),
     sitemap({

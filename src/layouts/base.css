@@ -22,22 +22,34 @@
 }
 
 @utility prose {
-  --tw-prose-body: var(--color-foreground);
+  --tw-prose-body: color-mix(in oklab, var(--color-foreground) 94%, transparent);
   --tw-prose-headings: var(--color-foreground);
   --tw-prose-lead: color-mix(in oklab, var(--color-foreground) 98%, transparent);
   --tw-prose-links: var(--color-accent);
   --tw-prose-bold: var(--color-foreground-highlight);
-  --tw-prose-counters: color-mix(in oklab, var(--color-foreground) 96%, transparent);
+  --tw-prose-counters: color-mix(in oklab, var(--color-foreground) 94%, transparent);
   --tw-prose-bullets: color-mix(in oklab, var(--color-foreground) 70%, transparent);
   --tw-prose-hr: color-mix(in oklab, var(--color-foreground) 10%, transparent);
-  --tw-prose-quotes: color-mix(in oklab, var(--color-foreground) 98%, transparent);
+  --tw-prose-quotes: color-mix(in oklab, var(--color-foreground) 94%, transparent);
   --tw-prose-quote-borders: color-mix(in oklab, var(--color-foreground) 10%, transparent);
-  --tw-prose-captions: color-mix(in oklab, var(--color-foreground) 96%, transparent);
+  --tw-prose-captions: color-mix(in oklab, var(--color-foreground) 94%, transparent);
   --tw-prose-code: var(--color-foreground-highlight);
   --tw-prose-pre-code: var(--color-foreground);
   --tw-prose-pre-bg: var(--color-background);
   --tw-prose-th-borders: color-mix(in oklab, var(--color-foreground) 8%, transparent);
   --tw-prose-td-borders: color-mix(in oklab, var(--color-foreground) 10%, transparent);
+}
+
+code::before {
+  content: none;
+}
+code::after {
+  content: none;
+}
+code {
+  background-color: color-mix(in oklab, var(--color-foreground) 8%, transparent);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.125rem;
 }
 
 @layer base {

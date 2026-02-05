@@ -1,0 +1,221 @@
+---
+title: "WebSockets with TanStack Start on Cloudflare"
+pubDate: "February 5 2026"
+description: "Implementing real-time WebSockets in TanStack Start using Cloudflare Durable Objects."
+---
+
+import Aside from "~/components/Aside.astro";
+
+Lately, I've been leaning into Cloudflare for my newer projects. The platform is fast, has a generous free tier, and offers powerful resources like Workers, D1, R2, and Durable Objects.
+
+I've heard about Durable Objects for a while, and finally got around to experimenting with them in a TanStack Start app. The goal was to build a simple WebSocket chat room in Start, using Durable Objects and WebSocket hibernation.
+
+You can read more about Durable Objects from the [official docs](https://developers.cloudflare.com/durable-objects/).
+
+## How it works
+
+1. Browser connects to `ws://localhost:5173/api/chat/<roomId>`.
+2. The Start server route maps `roomId` to a Durable Object instance: `idFromName(roomId)`
+3. The route forwards the request to the DO stub: `stub.fetch(request)`
+4. The Durable Object creates a `WebSocketPair`, validates the upgrade and serializes state, successfully initializing the connection.
+5. When idle, Cloudflare can hibernate the Durable Object instance. When a new message arrives, it reconstructs the object, restores active state, and calls `webSocketMessage`.
+
+<Aside variant="note" title="TIP">
+  If you want to skip ahead, here's the [complete demo on
+  GitHub](https://github.com/dotnize/tanstack-websockets-cloudflare), deployed
+  [here](https://ts-cf-websockets.mugnavo.com/).
+</Aside>
+
+## Configure the Durable Object binding
+
+We need a Durable Object binding and a migration in our Wrangler config:
+
+```jsonc
+// wrangler.jsonc
+{
+  // ...
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CHAT_ROOMS",
+        "class_name": "ChatRoom",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "chat-rooms-v1",
+      "new_classes": ["ChatRoom"],
+      // on the free plan, use "new_sqlite_classes" instead:
+      // "new_sqlite_classes": ["ChatRoom"]
+    },
+  ],
+}
+```
+
+## The Durable Object class
+
+This is the core. The Durable Object:
+
+- validates the WebSocket upgrade
+- receives & broadcasts messages
+- serializes connection state so it can be restored after hibernation
+
+```ts collapse={9-67}
+// src/durable-objects/chat-room.ts
+import { DurableObject } from "cloudflare:workers";
+
+interface ConnectionState {
+  id: string;
+}
+
+export class ChatRoom extends DurableObject {
+  private readonly sessions: Map<WebSocket, ConnectionState>;
+
+  constructor(ctx: DurableObjectState<Env>, env: Env) {
+    super(ctx, env);
+    this.sessions = new Map();
+
+    // Restore state for hibernated websockets
+    this.ctx.getWebSockets().forEach((ws) => {
+      const attachment = ws.deserializeAttachment() as ConnectionState | null;
+      if (attachment) this.sessions.set(ws, attachment);
+    });
+  }
+
+  async fetch(request: Request): Promise<Response> {
+    const upgradeHeader = request.headers.get("Upgrade");
+    if (!upgradeHeader || upgradeHeader.toLowerCase() !== "websocket") {
+      return new Response("Expected Upgrade: websocket", { status: 426 });
+    }
+
+    if (request.method !== "GET") {
+      return new Response("Expected GET", { status: 405 });
+    }
+
+    const webSocketPair = new WebSocketPair();
+    const [client, server] = Object.values(webSocketPair);
+
+    const connectionState: ConnectionState = { id: crypto.randomUUID() };
+    // Serialize so we can restore state if DO hibernates
+    server.serializeAttachment(connectionState);
+
+    this.ctx.acceptWebSocket(server);
+    this.sessions.set(server, connectionState);
+
+    return new Response(null, { status: 101, webSocket: client });
+  }
+
+  async webSocketMessage(ws: WebSocket, message: string | ArrayBuffer): Promise<void> {
+    const state = ws.deserializeAttachment() as ConnectionState | undefined;
+    const text = typeof message === "string" ? message : new TextDecoder().decode(message);
+
+    const payload = JSON.stringify({
+      type: "message",
+      from: state?.id ?? "unknown",
+      message: text,
+      timestamp: Date.now(),
+    });
+
+    this.sessions.forEach((_, socket) => socket.send(payload));
+  }
+
+  async webSocketClose(
+    ws: WebSocket,
+    code: number,
+    reason: string,
+    wasClean: boolean
+  ): Promise<void> {
+    console.log(`WebSocket closed: ${code} ${reason} (clean: ${wasClean})`);
+    this.sessions.delete(ws);
+    ws.close(code, reason);
+  }
+}
+```
+
+You can refer to the [official Cloudflare example](https://developers.cloudflare.com/durable-objects/examples/websocket-hibernation-server/) or the same [file](https://github.com/dotnize/tanstack-websockets-cloudflare/blob/main/src/durable-objects/chat-room.ts) in the demo repository.
+
+## Include the Durable Object class in the bundle
+
+Create a custom Start [server entry](https://tanstack.com/start/latest/docs/framework/react/guide/server-entry-point) so we can export our Durable Object class:
+
+```ts {4-5}
+// src/server.ts
+import handler, { createServerEntry } from "@tanstack/react-start/server-entry";
+
+// Export the DO class so Wrangler includes it in the bundle
+export { ChatRoom } from "@/durable-objects/chat-room";
+
+export default createServerEntry({
+  fetch(request) {
+    return handler.fetch(request);
+  },
+});
+```
+
+## Server route: forward the upgrade
+
+Now we need an endpoint that turns `roomId` into a Durable Object instance and forwards the request.
+
+This is what that looks like as a Start server route:
+
+```ts {13-17}
+import { createFileRoute } from "@tanstack/react-router";
+import { env } from "cloudflare:workers";
+
+export const Route = createFileRoute("/api/chat/$roomId")({
+  server: {
+    handlers: {
+      GET: async ({ request, params }) => {
+        const upgradeHeader = request.headers.get("Upgrade");
+        if (!upgradeHeader || upgradeHeader.toLowerCase() !== "websocket") {
+          return new Response("Expected Upgrade: websocket", { status: 426 });
+        }
+
+        const chatRooms = env.CHAT_ROOMS;
+        const id = chatRooms.idFromName(params.roomId);
+        const stub = chatRooms.get(id);
+
+        return stub.fetch(request);
+      },
+    },
+  },
+});
+```
+
+You can refer to the [file](https://github.com/dotnize/tanstack-websockets-cloudflare/blob/main/src/routes/api/chat.%24roomId.ts) in the demo repository.
+
+## Connect from the client
+
+Create a client to test it out. This is a minimal example:
+
+```ts
+let roomId = "demo";
+const ws = new WebSocket(`ws://${window.location.host}/api/chat/${roomId}`);
+
+ws.onmessage = (event) => {
+  console.log("message", event.data);
+};
+
+ws.onopen = () => {
+  ws.send("hello");
+};
+```
+
+A [full example client](https://github.com/dotnize/tanstack-websockets-cloudflare/blob/main/src/routes/index.tsx) is available at the demo repository.
+
+Open two tabs, connect both to the same room id, send some messages, and you'll see the broadcast. You can also check out the [deployed demo](https://ts-cf-websockets.mugnavo.com/) to see it in action.
+
+## Next steps
+
+- Validate `roomId`. Otherwise anyone can spawn unbounded DO instances.
+- Implement error handling for the DO lifecycle methods.
+- Keep in mind the [platform limits](https://developers.cloudflare.com/durable-objects/platform/limits/) for Durable Objects.
+- If you need auth, you can do it before forwarding the upgrade (in the Start route), or enforce it again inside the DO.
+
+## References
+
+- https://developers.cloudflare.com/durable-objects/examples/websocket-hibernation-server/
+- https://developers.cloudflare.com/durable-objects/best-practices/websockets/#websocket-hibernation-api
+- https://tanstack.com/start/latest/docs/framework/react/guide/hosting#cloudflare-workers--official-partner
+- https://tanstack.com/start/latest/docs/framework/react/guide/server-entry-point
