@@ -170,7 +170,7 @@ Now we need an endpoint that turns `roomId` into a Durable Object instance and f
 
 This is what that looks like as a Start server route:
 
-```ts {13-17}
+```ts title="src/routes/api/chat.$roomId.ts" {13-17}
 import { createFileRoute } from "@tanstack/react-router";
 import { env } from "cloudflare:workers";
 
