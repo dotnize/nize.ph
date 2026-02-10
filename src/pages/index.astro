@@ -48,10 +48,14 @@ const latestNotes = (await getCollection("notes", (note) => !note.id.startsWith(
       <div class="space-y-4">
         <h1 class="text-foreground-highlight text-6xl font-black sm:text-7xl">nize</h1>
 
-        <p class="text-lg sm:text-xl">
+        <p class="group text-xl sm:text-2xl">
           i'm nathaniel, a multi-disciplinary <span class="text-accent">software engineer</span>
-          specializing in full-stack <span class="text-accent">TypeScript</span> (React, Vue, Next.js,
-          TanStack) and <span class="text-accent">Go</span>.
+          who loves to build stuff on the
+          <span
+            class="text-accent-foreground bg-accent inline-block -rotate-4 rounded-md px-1.5 py-px transition-transform group-hover:rotate-0 sm:-rotate-6"
+          >
+            web
+          </span>.
         </p>
       </div>
 
