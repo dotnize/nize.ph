@@ -24,11 +24,11 @@
     "@astrojs/vercel": "^9.0.4",
     "@expressive-code/plugin-collapsible-sections": "^0.41.6",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.2.1",
     "@vercel/analytics": "^1.6.1",
-    "astro": "^5.17.1",
+    "astro": "^5.17.3",
     "astro-expressive-code": "^0.41.6",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
