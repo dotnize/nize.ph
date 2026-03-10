@@ -1,5 +1,6 @@
 import { glob } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
+import * as z from "astro/zod";
+import { defineCollection } from "astro:content";
 
 const notes = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content" }),

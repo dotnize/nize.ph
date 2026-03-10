@@ -9,40 +9,39 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
+    "check": "pnpm format && astro check",
     "prepare": "husky",
     "deps": "pnpm dlx taze@latest -Ilw",
     "deps:major": "pnpm dlx taze@latest major -Ilw"
   },
-  "lint-staged": {
-    "*": "prettier --ignore-unknown --write"
-  },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/rss": "^4.0.15",
-    "@astrojs/sitemap": "^3.7.0",
-    "@astrojs/vercel": "^9.0.4",
+    "@astrojs/check": "0.9.7",
+    "@astrojs/mdx": "^5.0.0",
+    "@astrojs/rss": "4.0.17",
+    "@astrojs/sitemap": "3.7.1",
+    "@astrojs/vercel": "^10.0.0",
     "@expressive-code/plugin-collapsible-sections": "^0.41.7",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.1",
-    "@vercel/analytics": "^1.6.1",
-    "astro": "^5.18.0",
+    "@vercel/analytics": "^2.0.0",
+    "astro": "^6.0.2",
     "astro-expressive-code": "^0.41.7",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
+    "lint-staged": "^16.3.3",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-organize-imports": "^4.3.0",
     "prettier-plugin-tailwindcss": "^0.7.2"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp"
-    ]
-  }
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.32.0"
 }
