@@ -33,17 +33,15 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Rubik",
-        cssVariable: "--font-custom",
-        fallbacks: ["sans-serif"],
-        styles: ["normal"],
-        subsets: ["latin"],
-        weights: [400],
-      },
-    ],
-  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Rubik",
+      cssVariable: "--font-custom",
+      fallbacks: ["sans-serif"],
+      styles: ["normal"],
+      subsets: ["latin"],
+      weights: [400],
+    },
+  ],
 });
