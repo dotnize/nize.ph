@@ -10,16 +10,7 @@
       ]
     },
     {
-      "source": "/:file\\.(png|jpg|webp)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=2592000"
-        }
-      ]
-    },
-    {
-      "source": "/_astro/:file(.*)",
+      "source": "/_astro/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
