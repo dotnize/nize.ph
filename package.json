@@ -16,17 +16,17 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.8",
-    "@astrojs/mdx": "^5.0.1",
+    "@astrojs/mdx": "^5.0.2",
     "@astrojs/rss": "4.0.17",
     "@astrojs/sitemap": "3.7.1",
-    "@astrojs/vercel": "^10.0.1",
+    "@astrojs/vercel": "^10.0.2",
     "@expressive-code/plugin-collapsible-sections": "^0.41.7",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.2",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^6.0.5",
+    "astro": "^6.0.8",
     "astro-expressive-code": "^0.41.7",
-    "tailwindcss": "^4.2.1",
+    "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
