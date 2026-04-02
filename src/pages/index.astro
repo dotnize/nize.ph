@@ -173,5 +173,13 @@ const latestNotes = (await getCollection("notes", (note) => !note.id.startsWith(
         </a>
       </div>
     </div>
+
+    <div class="space-y-2 rounded-lg border border-current/10 p-6 text-sm">
+      <p class="text-foreground/70">previous versions</p>
+      <div class="flex gap-4">
+        <a class="text-accent p-1 hover:underline" href="https://v1.nize.ph">v1</a>
+        <a class="text-accent p-1 hover:underline" href="https://v2.nize.ph">v2</a>
+      </div>
+    </div>
   </main>
 </PageLayout>
