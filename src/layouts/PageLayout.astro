@@ -13,9 +13,18 @@ const { title, description, image } = Astro.props;
 // const isBlogPost = pathname !== "/blog" && pathname !== "/blog/" && pathname.startsWith("/blog/");
 // const pageImage = image || (title !== "404" && !isBlogPost ? "/images/og.jpg" : undefined);
 const pageImage = image || (title !== "404" ? "/images/og.jpg" : undefined);
+const { schema, openGraphType, publishedTime, modifiedTime } = Astro.props;
 ---
 
-<Base title={title} description={description} image={pageImage}>
+<Base
+  title={title}
+  description={description}
+  image={pageImage}
+  schema={schema}
+  openGraphType={openGraphType}
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+>
   <div class="mx-auto max-w-prose space-y-2 max-md:px-4">
     <Header />
     <div class="min-h-[calc(100vh-28rem)]">

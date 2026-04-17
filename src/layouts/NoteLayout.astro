@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { type CollectionEntry } from "astro:content";
+import type { Article, WithContext } from "schema-dts";
 import PageLayout from "./PageLayout.astro";
 
 type CollectionData = CollectionEntry<"notes">["data"];
@@ -9,9 +10,33 @@ interface Props extends CollectionData {
   vault: boolean;
 }
 const { title, description, pubDate, updatedDate, heroImage, vault } = Astro.props;
+const noteURL = Astro.url.toString();
+const imageURL = heroImage ? new URL(heroImage, Astro.url).toString() : undefined;
+const schema: WithContext<Article> = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  url: noteURL,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  author: {
+    "@type": "Person",
+    name: "Nathaniel John Tampus",
+  },
+  ...(imageURL ? { image: imageURL } : {}),
+};
 ---
 
-<PageLayout title={title} description={description} image={heroImage}>
+<PageLayout
+  title={title}
+  description={description}
+  image={heroImage}
+  schema={schema}
+  openGraphType="article"
+  publishedTime={pubDate.toISOString()}
+  modifiedTime={(updatedDate ?? pubDate).toISOString()}
+>
   <div class="mt-8 mb-4 space-y-8">
     <article>
       {

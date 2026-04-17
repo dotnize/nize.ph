@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import type { ProfilePage, WithContext } from "schema-dts";
 
 import IconEmail from "~/components/icons/IconEmail.astro";
 import IconGitHub from "~/components/icons/IconGitHub.astro";
@@ -7,6 +8,7 @@ import IconLink from "~/components/icons/IconLink.astro";
 import IconLinkedIn from "~/components/icons/IconLinkedIn.astro";
 import IconX from "~/components/icons/IconX.astro";
 import ProjectCard from "~/components/ProjectCard.astro";
+import { SITE_DESCRIPTION } from "~/consts";
 import PageLayout from "~/layouts/PageLayout.astro";
 import IconFlagPh from "~/components/icons/IconFlagPh.astro";
 
@@ -40,9 +42,24 @@ const projects = [
 const latestNotes = (await getCollection("notes", (note) => !note.id.startsWith("vault/")))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3); // last 3 notes only
+
+const schema: WithContext<ProfilePage> = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  url: Astro.url.toString(),
+  mainEntity: {
+    "@type": "Person",
+    name: "Nathaniel John Tampus",
+    alternateName: "nize",
+    description: SITE_DESCRIPTION,
+    email: "nat@nize.ph",
+    image: new URL("/images/nize.webp", Astro.url).toString(),
+    sameAs: ["https://github.com/dotnize", "https://x.com/dotnize", "https://linkedin.com/in/nize"],
+  },
+};
 ---
 
-<PageLayout>
+<PageLayout schema={schema}>
   <main class="mt-4 space-y-24">
     <div class="space-y-10">
       <div class="space-y-4">
