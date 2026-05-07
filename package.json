@@ -20,18 +20,18 @@
     "@astrojs/rss": "4.0.18",
     "@astrojs/sitemap": "3.7.2",
     "@astrojs/vercel": "^10.0.6",
-    "@expressive-code/plugin-collapsible-sections": "^0.41.7",
+    "@expressive-code/plugin-collapsible-sections": "^0.42.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.4",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^6.2.1",
-    "astro-expressive-code": "^0.41.7",
+    "astro": "^6.3.0",
+    "astro-expressive-code": "^0.42.0",
     "tailwindcss": "^4.2.4",
     "typescript": "^6.0.3"
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.2",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-organize-imports": "^4.3.0",
@@ -44,5 +44,5 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@11.0.3"
+  "packageManager": "pnpm@11.0.8"
 }
