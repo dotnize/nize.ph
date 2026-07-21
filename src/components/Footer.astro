@@ -1,5 +1,5 @@
 ---
-import IconEmail from "~/components/icons/IconEmail.astro";
+import IconEmail from "#/components/icons/IconEmail.astro";
 import IconPhone from "./icons/IconPhone.astro";
 ---
 
@@ -9,9 +9,9 @@ import IconPhone from "./icons/IconPhone.astro";
   <div>
     <a class="text-accent group" href="mailto:nat@nize.ph" title="Email">
       <IconEmail class="inline size-4" />
-      <span class="select-all group-hover:underline">nat@nize.ph</span>
+      <span class="select-all group-hover:underline"> nat@nize.ph</span>
     </a>
-    <span>&ThinSpace;or&ThinSpace;</span>
+    <span>&ThinSpace;&ThinSpace;or&ThinSpace;&ThinSpace;</span>
     <a
       class="text-accent group"
       title="Book a call on Cal.com"
@@ -20,7 +20,7 @@ import IconPhone from "./icons/IconPhone.astro";
       rel="noopener noreferrer"
     >
       <IconPhone class="inline size-4" />
-      <span class="group-hover:underline">book a call</span>
+      <span class="group-hover:underline"> book a call</span>
     </a>
   </div>
 </footer>

@@ -2,15 +2,15 @@
 import { getCollection } from "astro:content";
 import type { ProfilePage, WithContext } from "schema-dts";
 
-import IconEmail from "~/components/icons/IconEmail.astro";
-import IconGitHub from "~/components/icons/IconGitHub.astro";
-import IconLink from "~/components/icons/IconLink.astro";
-import IconLinkedIn from "~/components/icons/IconLinkedIn.astro";
-import IconX from "~/components/icons/IconX.astro";
-import ProjectCard from "~/components/ProjectCard.astro";
-import { SITE_DESCRIPTION } from "~/consts";
-import PageLayout from "~/layouts/PageLayout.astro";
-import IconFlagPh from "~/components/icons/IconFlagPh.astro";
+import IconEmail from "#/components/icons/IconEmail.astro";
+import IconGitHub from "#/components/icons/IconGitHub.astro";
+import IconLink from "#/components/icons/IconLink.astro";
+import IconLinkedIn from "#/components/icons/IconLinkedIn.astro";
+import IconX from "#/components/icons/IconX.astro";
+import ProjectCard from "#/components/ProjectCard.astro";
+import { SITE_DESCRIPTION } from "#/consts";
+import PageLayout from "#/layouts/PageLayout.astro";
+import IconFlagPh from "#/components/icons/IconFlagPh.astro";
 
 const projects = [
   {
@@ -68,7 +68,7 @@ const schema: WithContext<ProfilePage> = {
         <p class="group text-xl sm:text-2xl">
           i'm nathaniel, a multi-disciplinary <span class="text-accent">software engineer</span>
           <br class="max-sm:hidden" />
-          who loves building stuff on the
+          who loves building stuff on the{" "}
           <span
             class="text-accent-foreground bg-accent inline-block -rotate-4 rounded-md px-1 transition-transform duration-300 group-hover:rotate-0 sm:-rotate-5"
           >
@@ -172,10 +172,10 @@ const schema: WithContext<ProfilePage> = {
     <div class="space-y-3">
       <h2 class="mb-4 text-3xl font-bold">webring</h2>
       <p>
-        this website is part of the
+        this website is part of the{" "}
         <a href="https://webring.antaresph.dev/" class="text-accent group">
           <IconFlagPh class="inline size-4" />
-          <span class="group-hover:underline">Pinoy Websites Webring</span>
+          <span class="group-hover:underline"> Pinoy Websites Webring</span>
         </a>
       </p>
       <div class="space-x-4 text-sm">

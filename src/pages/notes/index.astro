@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import PageLayout from "~/layouts/PageLayout.astro";
+import PageLayout from "#/layouts/PageLayout.astro";
 const allNotes = (await getCollection("notes")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );

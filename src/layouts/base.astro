@@ -4,7 +4,7 @@ import { Font } from "astro:assets";
 import type { WebPage, WithContext } from "schema-dts";
 import "./base.css";
 
-import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "~/consts";
+import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "#/consts";
 export type Props = LayoutProps;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
