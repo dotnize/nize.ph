@@ -15,8 +15,8 @@
     "deps:major": "pnpm dlx taze@latest major -Ilw"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.9",
-    "@astrojs/mdx": "7.0.3",
+    "@astrojs/check": "0.9.10",
+    "@astrojs/mdx": "7.0.4",
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
     "@astrojs/vercel": "11.0.3",
@@ -24,15 +24,15 @@
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.3",
     "@vercel/analytics": "2.0.1",
-    "astro": "7.1.3",
+    "astro": "7.1.4",
     "astro-expressive-code": "0.44.1",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
   },
   "devDependencies": {
     "husky": "9.1.7",
-    "lint-staged": "17.1.0",
-    "prettier": "3.9.5",
+    "lint-staged": "17.2.0",
+    "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-organize-imports": "4.3.0",
     "prettier-plugin-tailwindcss": "0.8.1",
@@ -44,5 +44,5 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@11.15.1"
+  "packageManager": "pnpm@11.17.0"
 }

@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@astrojs/check':
-        specifier: 0.9.9
-        version: 0.9.9(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@6.0.3)
+        specifier: 0.9.10
+        version: 0.9.10(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@6.0.3)
       '@astrojs/mdx':
-        specifier: 7.0.3
-        version: 7.0.3(@astrojs/markdown-satteri@0.3.4)(astro@7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0))
+        specifier: 7.0.4
+        version: 7.0.4(@astrojs/markdown-satteri@0.3.4)(astro@7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0))
       '@astrojs/rss':
         specifier: 4.0.19
         version: 4.0.19
@@ -22,7 +22,7 @@ importers:
         version: 3.7.3
       '@astrojs/vercel':
         specifier: 11.0.3
-        version: 11.0.3(astro@7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0))
+        version: 11.0.3(astro@7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0))
       '@expressive-code/plugin-collapsible-sections':
         specifier: 0.44.1
         version: 0.44.1
@@ -36,11 +36,11 @@ importers:
         specifier: 2.0.1
         version: 2.0.1
       astro:
-        specifier: 7.1.3
-        version: 7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0)
+        specifier: 7.1.4
+        version: 7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0)
       astro-expressive-code:
         specifier: 0.44.1
-        version: 0.44.1(astro@7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0))
+        version: 0.44.1(astro@7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0))
       tailwindcss:
         specifier: 4.3.3
         version: 4.3.3
@@ -52,28 +52,28 @@ importers:
         specifier: 9.1.7
         version: 9.1.7
       lint-staged:
-        specifier: 17.1.0
-        version: 17.1.0
+        specifier: 17.2.0
+        version: 17.2.0
       prettier:
-        specifier: 3.9.5
-        version: 3.9.5
+        specifier: 3.9.6
+        version: 3.9.6
       prettier-plugin-astro:
         specifier: 0.14.1
         version: 0.14.1
       prettier-plugin-organize-imports:
         specifier: 4.3.0
-        version: 4.3.0(prettier@3.9.5)(typescript@6.0.3)
+        version: 4.3.0(prettier@3.9.6)(typescript@6.0.3)
       prettier-plugin-tailwindcss:
         specifier: 0.8.1
-        version: 0.8.1(prettier-plugin-astro@0.14.1)(prettier-plugin-organize-imports@4.3.0(prettier@3.9.5)(typescript@6.0.3))(prettier@3.9.5)
+        version: 0.8.1(prettier-plugin-astro@0.14.1)(prettier-plugin-organize-imports@4.3.0(prettier@3.9.6)(typescript@6.0.3))(prettier@3.9.6)
       schema-dts:
         specifier: 2.0.0
         version: 2.0.0(typescript@6.0.3)
 
 packages:
 
-  '@astrojs/check@0.9.9':
-    resolution: {integrity: sha512-A5UW8uIuErLWEoRQvzgXpO1gTjUFtK8r7nU2Z7GewAMxUb7bPvpk11qaKKgxqXlHJWlAvaaxy+Xg28A6bmQ1Tg==}
+  '@astrojs/check@0.9.10':
+    resolution: {integrity: sha512-zgx/UQMozdjOa3bOxjgeCFdtpE3c9rRX6xHwa+2QXvy8z8Akifu2AtubHyv/zzC2znO8dl8fFWL4K+Ba9kS8HQ==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0 || ^6.0.0
@@ -149,8 +149,8 @@ packages:
   '@astrojs/internal-helpers@0.10.1':
     resolution: {integrity: sha512-5phcroT/vmOOrYuuAxtkbPixy5hePtlz9i8K4OeDv3dNK6/UQRuXPOSRTxIOBbUY5Sonw2UaxjbuVc43Mcir6Q==}
 
-  '@astrojs/language-server@2.16.12':
-    resolution: {integrity: sha512-3LpFphBCzveUgm5ZVDINB/v3YA4TgPa1EMOEFn3Zt/Ww6jojR25iN+kmzeUz7v/b9xkmq+hMACTX4hizN3VCEQ==}
+  '@astrojs/language-server@2.16.13':
+    resolution: {integrity: sha512-ekOa+CYprEq5n4EJC1qTIAhLk49HZIUQuFwrEuF+3JK/pdMaYnWoREFUI2A0KEPOJiFA2kamBzKzbYljDvUxLg==}
     hasBin: true
     peerDependencies:
       prettier: ^3.0.0
@@ -167,8 +167,8 @@ packages:
   '@astrojs/markdown-satteri@0.3.4':
     resolution: {integrity: sha512-6Lvt/bQZEBW+zzdhPblvfZEy5PGEYJaUsUqaCgwHeRPxZJL1gc9I+DRLKWJjjYTWDzVUTzXlMq4WwSK+X34CVw==}
 
-  '@astrojs/mdx@7.0.3':
-    resolution: {integrity: sha512-RxyIwU0uFam5ftwqKOjpIdhnFxZ/kEikeimLyQy3eGXbHT8WgRGzzesOIHVU8+m9TY8ag5WVOyvV24/GyqPdPQ==}
+  '@astrojs/mdx@7.0.4':
+    resolution: {integrity: sha512-fH4ouVZCgmLOH5z+GYnJMDOSUohn9U2W3p79Ck7PDK3EdGpe/crZAtT6Sp1ziEurj5NSQh7TxP8MSR4NOcC6fQ==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       '@astrojs/markdown-satteri': ^0.3.1
@@ -308,8 +308,8 @@ packages:
   '@emnapi/runtime@1.11.1':
     resolution: {integrity: sha512-vgj7R3y3Wgx24IQaGPA/R6YFXLHVMOZ0uVEyIQPaWs+rd1AzfEMXlAC22FYwO1XkKR6NPsq7mUandH8oIRdZFw==}
 
-  '@emnapi/runtime@1.11.2':
-    resolution: {integrity: sha512-kyOl3X0DuTiT1h2ft8r2fYO8JYtU9a9Xis/zBSiGArNaagCOWx90N1k2wxp18czFDH+OgcWGb5ZP/XMt3dcyPA==}
+  '@emnapi/runtime@1.11.3':
+    resolution: {integrity: sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA==}
 
   '@emnapi/wasi-threads@1.2.2':
     resolution: {integrity: sha512-c95qOXkHdydNKhscBTebqEC1CVAZpyqOfVfBzQ1qgzyl3gfeldUjIggDbIZgDKsHLgnsM+igH7TJ/eAasaVuMA==}
@@ -1024,15 +1024,15 @@ packages:
       vue-router:
         optional: true
 
-  '@vercel/cli-config@0.2.0':
-    resolution: {integrity: sha512-fJRRRB7734BDuXZ89yBEaA2ncYhH7bWX30mk04W80J6VAfQc+4iB8lyzAdaGpFV3/vNlkt9VZt+/uoQoWX6UsQ==}
+  '@vercel/cli-config@0.2.1':
+    resolution: {integrity: sha512-RhfyXmRLHdbnry8RJqHDc+5rGxMZ0bu+fpysZjtv3bE+BubpuwxTancHOKiH5zKQREsdwFVr3mOI2kOvxlOyxA==}
 
   '@vercel/cli-exec@1.0.0':
     resolution: {integrity: sha512-kQF8LGie/Hbdq9/psJxLE7owRTcqMQMhgybU04gCeR7cbQAr5t8OrjefDNColJv1QSSucFt4pLwRiARVmlOnug==}
     engines: {node: '>= 18'}
 
-  '@vercel/functions@3.7.5':
-    resolution: {integrity: sha512-ESf8BbeDebqRUyMi09JwRbQqpLn4g6fjcVVHPsHB56j2dSqRrSHO4h3X4aaxJf6iQQjzhAtDGI2xCWQ27JE8PA==}
+  '@vercel/functions@3.7.6':
+    resolution: {integrity: sha512-QKlSfrgvo4pGEnzHw8Dha9GRTb5hhLBbImKi4rL4CmxClaVs+36hxgjW0MOqez57wWShstpKOWZY/mU8KuYoUQ==}
     engines: {node: '>= 20'}
     peerDependencies:
       '@aws-sdk/credential-provider-web-identity': '*'
@@ -1048,8 +1048,8 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  '@vercel/oidc@3.8.0':
-    resolution: {integrity: sha512-r00laGW6Pv778RoR6M2NxX91ycSj+PBwVo+fOb9Bif+F0IyUKt25zrvBzfEzQpeAzbqOgPZyQibEWDdDFApd+A==}
+  '@vercel/oidc@3.8.1':
+    resolution: {integrity: sha512-ufdalm2MWOYksyj8KVpWjoOFPJO6zoYpuyvIggIQ2bB0CFCjTCiTkGXHqAKwG77GVRjOaN3/8S5ITlZpXWmqOw==}
     engines: {node: '>= 20'}
 
   '@vercel/routing-utils@5.3.3':
@@ -1127,13 +1127,13 @@ packages:
     resolution: {integrity: sha512-MxT4XZL7pzLHpuvhDKdMaQHMGGkJDLluKBLsbstn+8wv9sWcFT6h+0ve9qkml95amVTZtZV83gQe2hY+ojgHLg==}
     hasBin: true
 
-  ansi-regex@5.0.1:
-    resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
-    engines: {node: '>=8'}
+  ansi-regex@6.2.2:
+    resolution: {integrity: sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==}
+    engines: {node: '>=12'}
 
-  ansi-styles@4.3.0:
-    resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
-    engines: {node: '>=8'}
+  ansi-styles@6.2.3:
+    resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
+    engines: {node: '>=12'}
 
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
@@ -1164,8 +1164,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0 || ^6.0.0-beta || ^7.0.0
 
-  astro@7.1.3:
-    resolution: {integrity: sha512-4dhPyAAXthf3xLEYnG8SeL7yr/nTPPABfY7e9YF0yuO+vK9Xp+8Q5j4xzsmL3GueukQv4oNwGNTBepLOiDGeJA==}
+  astro@7.1.4:
+    resolution: {integrity: sha512-e0gkBReJECAZuuTgpEB5JMUc6J4mM6boD6wuVE1pBf/fMywG47f8qm9XQoA6kZB1RWHiHmUlLuQ2jd9Q5+72HQ==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     peerDependencies:
@@ -1197,9 +1197,9 @@ packages:
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
 
-  brace-expansion@5.0.7:
-    resolution: {integrity: sha512-7oFy703dxfY3/NLxC1fh2SUCQ0H9rmAY+5EpDVfXjUTTs+HEwR2nYaqLv+GWcTsumwxPfiz6CzCNkwXwBUwqCA==}
-    engines: {node: 18 || 20 || >=22}
+  brace-expansion@5.0.8:
+    resolution: {integrity: sha512-JZyDyq3D4AUifKTPOB7DELf6XsB3WdPuNxCtob1vFXPsSXhdAiHBWJ/tJ8HAc9aH84BK+5JFZLNkJKx3G9kzQg==}
+    engines: {node: 20 || >=22}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1232,9 +1232,9 @@ packages:
     resolution: {integrity: sha512-77PSwercCZU2Fc4sX94eF8k8Pxte6JAwL4/ICZLFjJLqegs7kCuAsqqj/70NQF6TvDpgFjkubQB2FW2ZZddvQg==}
     engines: {node: '>=8'}
 
-  cliui@8.0.1:
-    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
-    engines: {node: '>=12'}
+  cliui@9.0.1:
+    resolution: {integrity: sha512-k7ndgKhwoQveBL+/1tqGJYNz097I7WOvwbmmU2AR5+magtbjPWQTS1C5vzGkBC8Ym8UWRzfKUzUUqFLypY4Q+w==}
+    engines: {node: '>=20'}
 
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
@@ -1242,13 +1242,6 @@ packages:
 
   collapse-white-space@2.1.0:
     resolution: {integrity: sha512-loKTxY1zCOuG4j9f6EPnuyyYkf58RnhhWTvRoZEokgB+WbdXehfjFviyOVYkqzEWz1Q5kRiZdBYS5SwxbQYwzw==}
-
-  color-convert@2.0.1:
-    resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
-    engines: {node: '>=7.0.0'}
-
-  color-name@1.1.4:
-    resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
@@ -1366,8 +1359,8 @@ packages:
   emmet@2.4.11:
     resolution: {integrity: sha512-23QPJB3moh/U9sT4rQzGgeyyGIrcM+GH5uVYg2C6wZIxAIJq7Ng3QLT79tl8FUwDXhyq9SusfknOrofAKqvgyQ==}
 
-  emoji-regex@8.0.0:
-    resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
+  emoji-regex@10.6.0:
+    resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
 
   enhanced-resolve@5.24.3:
     resolution: {integrity: sha512-PwKooW9JUzh5chmYfHM3IQl5OkK2u2Nm011MgeZrss3JmFraUx/fqrf78kk8GUMYoibx/14MdwTl/1WKkG7TpQ==}
@@ -1497,6 +1490,10 @@ packages:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
+  get-east-asian-width@1.6.0:
+    resolution: {integrity: sha512-QRbvDIbx6YklUe6RxeTeleMR0yv3cYH6PsPZHcnVn7xv7zO1BHN8r0XETu8n6Ye3Q+ahtSarc3WgtNWmehIBfA==}
+    engines: {node: '>=18'}
+
   get-stream@6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
     engines: {node: '>=10'}
@@ -1604,10 +1601,6 @@ packages:
     resolution: {integrity: sha512-LHE+wROyG/Y/0ZnbktRCoTix2c1RhgWaZraMZ8o1Q7zCh0VSrICJQO5oqIIISrcSBtrXv0o233w1IYwsWCjTzA==}
     engines: {node: '>=20'}
     hasBin: true
-
-  is-fullwidth-code-point@3.0.0:
-    resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
-    engines: {node: '>=8'}
 
   is-hexadecimal@2.0.1:
     resolution: {integrity: sha512-DgZQp241c8oO6cA1SbTEWiXeoxV42vlcJxgH+B3hi1AiqqKruZR3ZGF8In3fj4+/y/7rHvlOZLZtgJ/4ttYGZg==}
@@ -1801,8 +1794,8 @@ packages:
     resolution: {integrity: sha512-WkUDrojuJs0xkgGf2udWxa3yGBRxPtxUkB79i6aCZLRgc7PM8fZe9TosfPDcvEpQZbuFASnHYmRLBLUbmLOIIA==}
     engines: {node: '>= 12.0.0'}
 
-  lint-staged@17.1.0:
-    resolution: {integrity: sha512-d7UQRu/9ZPgfu4+hu/k0wny5GEaIxo+2jb2LJqQDkE7cHRTm1HGqNUDq5UOwsGPpjpaNAFmgAsYo3TR+i9cSJw==}
+  lint-staged@17.2.0:
+    resolution: {integrity: sha512-FchGnFe4i4B1C/a35SPU9bNGPEHSC1+1iV0plLjzBmKVe9klZrlRfSgK6Cw4VeHyqOXbJUXP0vON61uRftNQ0A==}
     engines: {node: '>=22.22.1'}
     hasBin: true
 
@@ -1815,6 +1808,9 @@ packages:
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
+
+  magic-string@1.1.0:
+    resolution: {integrity: sha512-kS3VHe0nEPST2saQV4Rbkchcd3UBRkVTQHo1D3h/ZTwFDhai/mfKkmtPAtD129EOI7K3HlHIsFOt0WrI2/oU9g==}
 
   magicast@0.5.3:
     resolution: {integrity: sha512-pVKE4UdSQ7DvHzivsCIFx2BJn1mHG6KsyrFcaxFx6tONdneEuThrDx0Cj3AMg58KyN4pzYT+LHOotxDQDjNvkw==}
@@ -1995,8 +1991,8 @@ packages:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
 
-  minimatch@10.2.5:
-    resolution: {integrity: sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==}
+  minimatch@10.2.6:
+    resolution: {integrity: sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==}
     engines: {node: 18 || 20 || >=22}
 
   minipass@7.1.3:
@@ -2092,16 +2088,16 @@ packages:
     resolution: {integrity: sha512-0trZaiG7Y7kN/Egy9a8j47t9osC0Tch4PaIWd9yGF6bvmlk7muExRvGNYb8sXBwEKMoNKsbNN9P8EefuQekE4Q==}
     engines: {node: '>=20'}
 
-  p-queue@9.3.2:
-    resolution: {integrity: sha512-pCsnA4piiqkrwAJ555Xh/lc717SijJrTBr96P1q6BRnUdm2XPB4v91oiXVAUr5HbIbXW4D8kIslfJUE28Rud6A==}
+  p-queue@9.3.3:
+    resolution: {integrity: sha512-NXAOdnEe5FsZJfT4oK84lE1Y5cFFdWlRuOo5tww8DyNMxyRXwn39fIkUtNLKppcPC+UYU/bXujNCUGDv01y7CA==}
     engines: {node: '>=20'}
 
   p-timeout@7.0.1:
     resolution: {integrity: sha512-AxTM2wDGORHGEkPCt8yqxOTMgpfbEHqF51f/5fJCmwFC3C/zNcGT63SymH2ttOAaiIws2zVg4+izQCjrakcwHg==}
     engines: {node: '>=20'}
 
-  package-manager-detector@1.7.0:
-    resolution: {integrity: sha512-xg1eHpwYL/D/HEdWw2goFZP6vV0FH7W+PZ5rFkGjdIDLtxq7EkzBUeT3m+lndYCt8wKbmofUu1MUdMCXkCk9ZQ==}
+  package-manager-detector@1.8.0:
+    resolution: {integrity: sha512-yQA4H19AmPEoMUeavPMDIe1higySl/gH/yaQrkT/s07Qp+7pp2hYz30N3z2l5BkjVkF9Ow6o0wjJamm2y7Sn0A==}
 
   parse-entities@4.0.2:
     resolution: {integrity: sha512-GG2AQYWoLgL877gQIKeRPGO1xF9+eG1ujIb5soS5gPvLQ1y2o8FL90w2QWNdf9I361Mpp7726c+lj3U0qK1uGw==}
@@ -2161,8 +2157,8 @@ packages:
     resolution: {integrity: sha512-bIoJLOmjCO1S9XdY/DcnR5hJxvrDir1PbGChrzXG3vw0/FOliy/fA3dmdhQ441kah4gKv+TwckGzex6wNS5cnQ==}
     engines: {node: '>=4'}
 
-  postcss@8.5.20:
-    resolution: {integrity: sha512-lW616l85ucIQL+FocMmL7pQFPqBmwejrCMg+iPxyImlrANNJG9NHq/RkyCZopDhd8C3LA03PHRJDjkbGu8vvug==}
+  postcss@8.5.23:
+    resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier-plugin-astro@0.14.1:
@@ -2234,8 +2230,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.9.5:
-    resolution: {integrity: sha512-/FVl766LpUfB5vXgCYOYa0MeV/441Ia99AeICQIQFTY/Nw0roZwULcXpku5i1/m5kt/baz+s4Zogspd839HSMg==}
+  prettier@3.9.6:
+    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2312,8 +2308,8 @@ packages:
   remark-rehype@11.1.2:
     resolution: {integrity: sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==}
 
-  remark-smartypants@3.0.2:
-    resolution: {integrity: sha512-ILTWeOriIluwEvPjv67v7Blgrcx+LZOkAUVtKI3putuhlZm84FnqDORNXPPm+HY3NdZOMhyDwZ1E+eZB/Df5dA==}
+  remark-smartypants@3.0.3:
+    resolution: {integrity: sha512-gCaK+ndZ0hYezlqFegHFCVh2CQemsi0Npdh1qVM9bxlUFknjkbP6VmojWhddOCrbK0PbbacmYLWfTULRiT1eWA==}
     engines: {node: '>=16.0.0'}
 
   remark-stringify@11.0.0:
@@ -2324,10 +2320,6 @@ packages:
 
   request-light@0.7.0:
     resolution: {integrity: sha512-lMbBMrDoxgsyO+yB3sDcrDuX85yYt7sS8BfQd11jtbW/z5ZWgLZRcEGLsLoYw7I0WSUGQBs8CC8ScIxkTX1+6Q==}
-
-  require-directory@2.1.1:
-    resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
-    engines: {node: '>=0.10.0'}
 
   require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
@@ -2366,8 +2358,8 @@ packages:
   satteri@0.9.5:
     resolution: {integrity: sha512-ZuWVl+vnM64y+/TtX8Kosv2c00W+hLQiiwnEL6H0UKVVrxFqMw4D2CJHHQaouVd89OAhtBBfjWLqhKi3TVUV4w==}
 
-  sax@1.6.0:
-    resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
+  sax@1.6.1:
+    resolution: {integrity: sha512-42tBVwLWnaQvW5zc4HbZrTuWccECCZfBi92FDuwtqxasH+JbPB3/FOKb1m222K42R4WxuxzzMsTswfzgtSu64Q==}
     engines: {node: '>=11.0.0'}
 
   schema-dts-lib@1.0.0:
@@ -2416,8 +2408,8 @@ packages:
     engines: {node: '>=20.19.5', npm: '>=10.8.2'}
     hasBin: true
 
-  smol-toml@1.7.0:
-    resolution: {integrity: sha512-aqVvWoyO21L23mb+drl4RmMXbf6N7FdHjAhTRA9ZBL7apWBgfWC16KjrASI+1p9GAroljyMHj6fK67i0UiTNvQ==}
+  smol-toml@1.7.1:
+    resolution: {integrity: sha512-PPlsspAZ4jbMBu5DMFhfUGDQLu/vrL4SyBROVS37x8ynnVmFIs1VPBz1Co8Xks3TvpIaZXmU85y4DrQ+UyVFoQ==}
     engines: {node: '>= 18'}
 
   source-map-js@1.2.1:
@@ -2438,16 +2430,20 @@ packages:
     resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==}
     engines: {node: '>=0.6.19'}
 
-  string-width@4.2.3:
-    resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
-    engines: {node: '>=8'}
+  string-width@7.2.0:
+    resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
+    engines: {node: '>=18'}
+
+  string-width@8.2.2:
+    resolution: {integrity: sha512-GaPUh5gfdrYzqeVNZvUfT23vYYxXzKYidUcnMtJg/3rxRV63EFZy3k6xfKlmfeJD0176lnUV/Usr3XcwSvFzpg==}
+    engines: {node: '>=20'}
 
   stringify-entities@4.0.4:
     resolution: {integrity: sha512-IwfBptatlO+QCJUo19AqvrPNqlVMpW9YEL2LIVY+Rpv2qsjCGxaDLNRgeGsQWJhfItebuJhsGSLjaBbNSQ+ieg==}
 
-  strip-ansi@6.0.1:
-    resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
-    engines: {node: '>=8'}
+  strip-ansi@7.2.0:
+    resolution: {integrity: sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==}
+    engines: {node: '>=12'}
 
   strip-final-newline@2.0.0:
     resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==}
@@ -2477,8 +2473,8 @@ packages:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
 
-  tar@7.5.20:
-    resolution: {integrity: sha512-9FcyK4PA6+WbzlTM9WhQm6vB5W7cP7dUiPsv1g7YDwEQnQ1CGpK3MGlKk/ITVWMk05kHZuBhmVhiv8LZoy/PFQ==}
+  tar@7.5.22:
+    resolution: {integrity: sha512-MFO/QzvtAOmJbkhOaCTvbGcFN9L9b+JunIsDwaKljSOdcLMea3NJ1k9Usz/rjdfSXTq4dfzfeS7W4p4YOAAHeA==}
     engines: {node: '>=18'}
 
   tiny-inflate@1.0.3:
@@ -2815,9 +2811,9 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  wrap-ansi@7.0.0:
-    resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
-    engines: {node: '>=10'}
+  wrap-ansi@9.0.2:
+    resolution: {integrity: sha512-42AtmgqjV+X1VpdOfyTGOYRi0/zsoLqtXQckTmqTeybT+BDIbM/Guxo7x3pE2vtpr1ok6xRqM9OpBe+Jyoqyww==}
+    engines: {node: '>=18'}
 
   xdg-app-paths@5.5.1:
     resolution: {integrity: sha512-hI3flOB4PLZIy5prbtTpirobtPE2ZtZ52szO+2mM9Efp6ErM398La+C1lIpNWDfNoQk+6Lsi6nMcCwVB7pxeMQ==}
@@ -2856,17 +2852,13 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
-  yargs-parser@21.1.1:
-    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
-    engines: {node: '>=12'}
-
   yargs-parser@22.0.0:
     resolution: {integrity: sha512-rwu/ClNdSMpkSrUb+d6BRsSkLUq1fmfsY6TOpYzTwvwkg1/NRG85KBy3kq++A8LKQwX6lsu+aWad+2khvuXrqw==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=23}
 
-  yargs@17.7.3:
-    resolution: {integrity: sha512-GZtjxm/J/4TSxuL3FNYjCmLktBTnIw/rVmKSIyKeYAZpmJB2ig9VauCC5xsa82GNKVKDAqpOn3KVzNt0zmrU0g==}
-    engines: {node: '>=12'}
+  yargs@18.1.0:
+    resolution: {integrity: sha512-2rAgRKu54VsHkqI0/tYkmluGXHD4KW7yZoycuqDQ15QOTnc2VVfy0nN/1eMhnQLO00A+dwtK20xuCnc1YGeUyg==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=23}
 
   yocto-queue@1.2.2:
     resolution: {integrity: sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==}
@@ -2883,13 +2875,13 @@ packages:
 
 snapshots:
 
-  '@astrojs/check@0.9.9(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@6.0.3)':
+  '@astrojs/check@0.9.10(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@6.0.3)':
     dependencies:
-      '@astrojs/language-server': 2.16.12(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@6.0.3)
+      '@astrojs/language-server': 2.16.13(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@6.0.3)
       chokidar: 4.0.3
       kleur: 4.1.5
       typescript: 6.0.3
-      yargs: 17.7.3
+      yargs: 18.1.0
     transitivePeerDependencies:
       - prettier
       - prettier-plugin-astro
@@ -2912,9 +2904,9 @@ snapshots:
   '@astrojs/compiler-binding-linux-x64-musl@0.3.1':
     optional: true
 
-  '@astrojs/compiler-binding-wasm32-wasi@0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)':
+  '@astrojs/compiler-binding-wasm32-wasi@0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)':
     dependencies:
-      '@napi-rs/wasm-runtime': 1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)
+      '@napi-rs/wasm-runtime': 1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -2926,7 +2918,7 @@ snapshots:
   '@astrojs/compiler-binding-win32-x64-msvc@0.3.1':
     optional: true
 
-  '@astrojs/compiler-binding@0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)':
+  '@astrojs/compiler-binding@0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)':
     optionalDependencies:
       '@astrojs/compiler-binding-darwin-arm64': 0.3.1
       '@astrojs/compiler-binding-darwin-x64': 0.3.1
@@ -2934,16 +2926,16 @@ snapshots:
       '@astrojs/compiler-binding-linux-arm64-musl': 0.3.1
       '@astrojs/compiler-binding-linux-x64-gnu': 0.3.1
       '@astrojs/compiler-binding-linux-x64-musl': 0.3.1
-      '@astrojs/compiler-binding-wasm32-wasi': 0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)
+      '@astrojs/compiler-binding-wasm32-wasi': 0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)
       '@astrojs/compiler-binding-win32-arm64-msvc': 0.3.1
       '@astrojs/compiler-binding-win32-x64-msvc': 0.3.1
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
 
-  '@astrojs/compiler-rs@0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)':
+  '@astrojs/compiler-rs@0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)':
     dependencies:
-      '@astrojs/compiler-binding': 0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)
+      '@astrojs/compiler-binding': 0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -2958,10 +2950,10 @@ snapshots:
       picomatch: 4.0.5
       retext-smartypants: 6.2.0
       shiki: 4.3.1
-      smol-toml: 1.7.0
+      smol-toml: 1.7.1
       unified: 11.0.5
 
-  '@astrojs/language-server@2.16.12(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@6.0.3)':
+  '@astrojs/language-server@2.16.13(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@6.0.3)':
     dependencies:
       '@astrojs/compiler': 2.13.1
       '@astrojs/yaml2ts': 0.2.4
@@ -2975,14 +2967,14 @@ snapshots:
       volar-service-css: 0.0.71(@volar/language-service@2.4.28)
       volar-service-emmet: 0.0.71(@volar/language-service@2.4.28)
       volar-service-html: 0.0.71(@volar/language-service@2.4.28)
-      volar-service-prettier: 0.0.71(@volar/language-service@2.4.28)(prettier@3.9.5)
+      volar-service-prettier: 0.0.71(@volar/language-service@2.4.28)(prettier@3.9.6)
       volar-service-typescript: 0.0.71(@volar/language-service@2.4.28)
       volar-service-typescript-twoslash-queries: 0.0.71(@volar/language-service@2.4.28)
       volar-service-yaml: 0.0.71(@volar/language-service@2.4.28)
       vscode-html-languageservice: 5.6.2
       vscode-uri: 3.1.0
     optionalDependencies:
-      prettier: 3.9.5
+      prettier: 3.9.6
       prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - typescript
@@ -3000,7 +2992,7 @@ snapshots:
       remark-gfm: 4.0.1
       remark-parse: 11.0.0
       remark-rehype: 11.1.2
-      remark-smartypants: 3.0.2
+      remark-smartypants: 3.0.3
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.1.0
@@ -3017,20 +3009,20 @@ snapshots:
       hast-util-from-html: 2.0.3
       satteri: 0.9.5
 
-  '@astrojs/mdx@7.0.3(@astrojs/markdown-satteri@0.3.4)(astro@7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0))':
+  '@astrojs/mdx@7.0.4(@astrojs/markdown-satteri@0.3.4)(astro@7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0))':
     dependencies:
       '@astrojs/internal-helpers': 0.10.1
       '@astrojs/markdown-remark': 7.2.1
       '@mdx-js/mdx': 3.1.1
       acorn: 8.17.0
-      astro: 7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0)
+      astro: 7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0)
       es-module-lexer: 2.3.1
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
       piccolore: 0.1.3
       rehype-raw: 7.0.0
       remark-gfm: 4.0.1
-      remark-smartypants: 3.0.2
+      remark-smartypants: 3.0.3
       source-map: 0.7.6
       unist-util-visit: 5.1.0
       vfile: 6.0.3
@@ -3060,16 +3052,16 @@ snapshots:
       ci-info: 4.4.0
       dset: 3.1.4
       is-docker: 4.0.0
-      package-manager-detector: 1.7.0
+      package-manager-detector: 1.8.0
 
-  '@astrojs/vercel@11.0.3(astro@7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0))':
+  '@astrojs/vercel@11.0.3(astro@7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0))':
     dependencies:
       '@astrojs/internal-helpers': 0.10.1
       '@vercel/analytics': 1.6.1
-      '@vercel/functions': 3.7.5
+      '@vercel/functions': 3.7.6
       '@vercel/nft': 1.10.2
       '@vercel/routing-utils': 5.3.3
-      astro: 7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0)
+      astro: 7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0)
       esbuild: 0.28.1
       tinyglobby: 0.2.17
     transitivePeerDependencies:
@@ -3186,7 +3178,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@emnapi/runtime@1.11.2':
+  '@emnapi/runtime@1.11.3':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -3281,8 +3273,8 @@ snapshots:
       hast-util-to-html: 9.0.5
       hast-util-to-text: 4.0.2
       hastscript: 9.0.1
-      postcss: 8.5.20
-      postcss-nested: 6.2.0(postcss@8.5.20)
+      postcss: 8.5.23
+      postcss-nested: 6.2.0(postcss@8.5.23)
       unist-util-visit: 5.1.0
       unist-util-visit-parents: 6.0.2
 
@@ -3393,7 +3385,7 @@ snapshots:
 
   '@img/sharp-wasm32@0.35.3':
     dependencies:
-      '@emnapi/runtime': 1.11.2
+      '@emnapi/runtime': 1.11.3
     optional: true
 
   '@img/sharp-webcontainers-wasm32@0.35.3':
@@ -3441,7 +3433,7 @@ snapshots:
       node-fetch: 2.7.0
       nopt: 8.1.0
       semver: 7.8.5
-      tar: 7.5.20
+      tar: 7.5.22
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -3483,10 +3475,10 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
-  '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)':
+  '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)':
     dependencies:
       '@emnapi/core': 1.11.1
-      '@emnapi/runtime': 1.11.2
+      '@emnapi/runtime': 1.11.3
       '@tybys/wasm-util': 0.10.3
     optional: true
 
@@ -3715,7 +3707,7 @@ snapshots:
 
   '@vercel/analytics@2.0.1': {}
 
-  '@vercel/cli-config@0.2.0':
+  '@vercel/cli-config@0.2.1':
     dependencies:
       xdg-app-paths: 5.5.1
       zod: 4.1.11
@@ -3724,9 +3716,9 @@ snapshots:
     dependencies:
       execa: 5.1.1
 
-  '@vercel/functions@3.7.5':
+  '@vercel/functions@3.7.6':
     dependencies:
-      '@vercel/oidc': 3.8.0
+      '@vercel/oidc': 3.8.1
 
   '@vercel/nft@1.10.2':
     dependencies:
@@ -3747,9 +3739,9 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/oidc@3.8.0':
+  '@vercel/oidc@3.8.1':
     dependencies:
-      '@vercel/cli-config': 0.2.0
+      '@vercel/cli-config': 0.2.1
       '@vercel/cli-exec': 1.0.0
       jose: 5.10.0
 
@@ -3851,11 +3843,9 @@ snapshots:
     dependencies:
       process-ancestry: 0.1.0
 
-  ansi-regex@5.0.1: {}
+  ansi-regex@6.2.2: {}
 
-  ansi-styles@4.3.0:
-    dependencies:
-      color-convert: 2.0.1
+  ansi-styles@6.2.3: {}
 
   anymatch@3.1.3:
     dependencies:
@@ -3874,15 +3864,15 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-expressive-code@0.44.1(astro@7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0)):
+  astro-expressive-code@0.44.1(astro@7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0)):
     dependencies:
-      astro: 7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0)
+      astro: 7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0)
       rehype-expressive-code: 0.44.1
       url-extras: 0.1.0
 
-  astro@7.1.3(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(@vercel/functions@3.7.5)(jiti@2.7.0)(yaml@2.9.0):
+  astro@7.1.4(@astrojs/markdown-remark@7.2.1)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(@vercel/functions@3.7.6)(jiti@2.7.0)(yaml@2.9.0):
     dependencies:
-      '@astrojs/compiler-rs': 0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)
+      '@astrojs/compiler-rs': 0.3.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)
       '@astrojs/internal-helpers': 0.10.1
       '@astrojs/markdown-satteri': 0.3.4
       '@astrojs/telemetry': 3.3.3
@@ -3910,26 +3900,26 @@ snapshots:
       http-cache-semantics: 4.2.0
       js-yaml: 4.3.0
       jsonc-parser: 3.3.1
-      magic-string: 0.30.21
+      magic-string: 1.1.0
       magicast: 0.5.3
       mrmime: 2.0.1
       neotraverse: 1.0.1
       obug: 2.1.4
       p-limit: 7.3.1
-      p-queue: 9.3.2
-      package-manager-detector: 1.7.0
+      p-queue: 9.3.3
+      package-manager-detector: 1.8.0
       piccolore: 0.1.3
       picomatch: 4.0.5
       semver: 7.8.5
       shiki: 4.3.1
-      smol-toml: 1.7.0
+      smol-toml: 1.7.1
       svgo: 4.0.2
       tinyclip: 0.1.15
       tinyexec: 1.2.4
       tinyglobby: 0.2.17
       ultrahtml: 1.7.0
       unifont: 0.7.4
-      unstorage: 1.17.5(@vercel/functions@3.7.5)
+      unstorage: 1.17.5(@vercel/functions@3.7.6)
       vite: 8.1.5(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)
       vitefu: 1.1.3(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
       xxhash-wasm: 1.1.0
@@ -3989,7 +3979,7 @@ snapshots:
 
   boolbase@1.0.0: {}
 
-  brace-expansion@5.0.7:
+  brace-expansion@5.0.8:
     dependencies:
       balanced-match: 4.0.4
 
@@ -4015,21 +4005,15 @@ snapshots:
 
   ci-info@4.4.0: {}
 
-  cliui@8.0.1:
+  cliui@9.0.1:
     dependencies:
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      wrap-ansi: 7.0.0
+      string-width: 7.2.0
+      strip-ansi: 7.2.0
+      wrap-ansi: 9.0.2
 
   clsx@2.1.1: {}
 
   collapse-white-space@2.1.0: {}
-
-  color-convert@2.0.1:
-    dependencies:
-      color-name: 1.1.4
-
-  color-name@1.1.4: {}
 
   comma-separated-tokens@2.0.3: {}
 
@@ -4132,7 +4116,7 @@ snapshots:
       '@emmetio/abbreviation': 2.3.3
       '@emmetio/css-abbreviation': 2.1.8
 
-  emoji-regex@8.0.0: {}
+  emoji-regex@10.6.0: {}
 
   enhanced-resolve@5.24.3:
     dependencies:
@@ -4302,6 +4286,8 @@ snapshots:
 
   get-caller-file@2.0.5: {}
 
+  get-east-asian-width@1.6.0: {}
+
   get-stream@6.0.1: {}
 
   get-tsconfig@5.0.0-beta.4:
@@ -4312,7 +4298,7 @@ snapshots:
 
   glob@13.0.6:
     dependencies:
-      minimatch: 10.2.5
+      minimatch: 10.2.6
       minipass: 7.1.3
       path-scurry: 2.0.2
 
@@ -4516,8 +4502,6 @@ snapshots:
 
   is-docker@4.0.0: {}
 
-  is-fullwidth-code-point@3.0.0: {}
-
   is-hexadecimal@2.0.1: {}
 
   is-plain-obj@4.1.0: {}
@@ -4645,7 +4629,7 @@ snapshots:
       lightningcss-win32-arm64-msvc: 1.33.0
       lightningcss-win32-x64-msvc: 1.33.0
 
-  lint-staged@17.1.0:
+  lint-staged@17.2.0:
     dependencies:
       picomatch: 4.0.5
       string-argv: 0.3.2
@@ -4658,6 +4642,10 @@ snapshots:
   lru-cache@11.5.2: {}
 
   magic-string@0.30.21:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+
+  magic-string@1.1.0:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -5112,9 +5100,9 @@ snapshots:
 
   mimic-fn@2.1.0: {}
 
-  minimatch@10.2.5:
+  minimatch@10.2.6:
     dependencies:
-      brace-expansion: 5.0.7
+      brace-expansion: 5.0.8
 
   minipass@7.1.3: {}
 
@@ -5188,14 +5176,14 @@ snapshots:
     dependencies:
       yocto-queue: 1.2.2
 
-  p-queue@9.3.2:
+  p-queue@9.3.3:
     dependencies:
       eventemitter3: 5.0.4
       p-timeout: 7.0.1
 
   p-timeout@7.0.1: {}
 
-  package-manager-detector@1.7.0: {}
+  package-manager-detector@1.8.0: {}
 
   parse-entities@4.0.2:
     dependencies:
@@ -5243,9 +5231,9 @@ snapshots:
 
   picomatch@4.0.5: {}
 
-  postcss-nested@6.2.0(postcss@8.5.20):
+  postcss-nested@6.2.0(postcss@8.5.23):
     dependencies:
-      postcss: 8.5.20
+      postcss: 8.5.23
       postcss-selector-parser: 6.1.4
 
   postcss-selector-parser@6.0.10:
@@ -5258,7 +5246,7 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss@8.5.20:
+  postcss@8.5.23:
     dependencies:
       nanoid: 3.3.16
       picocolors: 1.1.1
@@ -5267,22 +5255,22 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.13.1
-      prettier: 3.9.5
+      prettier: 3.9.6
       sass-formatter: 0.7.9
 
-  prettier-plugin-organize-imports@4.3.0(prettier@3.9.5)(typescript@6.0.3):
+  prettier-plugin-organize-imports@4.3.0(prettier@3.9.6)(typescript@6.0.3):
     dependencies:
-      prettier: 3.9.5
+      prettier: 3.9.6
       typescript: 6.0.3
 
-  prettier-plugin-tailwindcss@0.8.1(prettier-plugin-astro@0.14.1)(prettier-plugin-organize-imports@4.3.0(prettier@3.9.5)(typescript@6.0.3))(prettier@3.9.5):
+  prettier-plugin-tailwindcss@0.8.1(prettier-plugin-astro@0.14.1)(prettier-plugin-organize-imports@4.3.0(prettier@3.9.6)(typescript@6.0.3))(prettier@3.9.6):
     dependencies:
-      prettier: 3.9.5
+      prettier: 3.9.6
     optionalDependencies:
       prettier-plugin-astro: 0.14.1
-      prettier-plugin-organize-imports: 4.3.0(prettier@3.9.5)(typescript@6.0.3)
+      prettier-plugin-organize-imports: 4.3.0(prettier@3.9.6)(typescript@6.0.3)
 
-  prettier@3.9.5: {}
+  prettier@3.9.6: {}
 
   prismjs@1.30.0: {}
 
@@ -5397,7 +5385,7 @@ snapshots:
       unified: 11.0.5
       vfile: 6.0.3
 
-  remark-smartypants@3.0.2:
+  remark-smartypants@3.0.3:
     dependencies:
       retext: 9.0.0
       retext-smartypants: 6.2.0
@@ -5413,8 +5401,6 @@ snapshots:
   request-light@0.5.8: {}
 
   request-light@0.7.0: {}
-
-  require-directory@2.1.1: {}
 
   require-from-string@2.0.2: {}
 
@@ -5491,7 +5477,7 @@ snapshots:
       '@bruits/satteri-win32-arm64-msvc': 0.9.5
       '@bruits/satteri-win32-x64-msvc': 0.9.5
 
-  sax@1.6.0: {}
+  sax@1.6.1: {}
 
   schema-dts-lib@1.0.0(typescript@6.0.3):
     dependencies:
@@ -5565,9 +5551,9 @@ snapshots:
       '@types/node': 24.13.3
       '@types/sax': 1.2.7
       arg: 5.0.2
-      sax: 1.6.0
+      sax: 1.6.1
 
-  smol-toml@1.7.0: {}
+  smol-toml@1.7.1: {}
 
   source-map-js@1.2.1: {}
 
@@ -5579,20 +5565,25 @@ snapshots:
 
   string-argv@0.3.2: {}
 
-  string-width@4.2.3:
+  string-width@7.2.0:
     dependencies:
-      emoji-regex: 8.0.0
-      is-fullwidth-code-point: 3.0.0
-      strip-ansi: 6.0.1
+      emoji-regex: 10.6.0
+      get-east-asian-width: 1.6.0
+      strip-ansi: 7.2.0
+
+  string-width@8.2.2:
+    dependencies:
+      get-east-asian-width: 1.6.0
+      strip-ansi: 7.2.0
 
   stringify-entities@4.0.4:
     dependencies:
       character-entities-html4: 2.1.0
       character-entities-legacy: 3.0.0
 
-  strip-ansi@6.0.1:
+  strip-ansi@7.2.0:
     dependencies:
-      ansi-regex: 5.0.1
+      ansi-regex: 6.2.2
 
   strip-final-newline@2.0.0: {}
 
@@ -5620,13 +5611,13 @@ snapshots:
       css-what: 6.2.2
       csso: 5.0.5
       picocolors: 1.1.1
-      sax: 1.6.0
+      sax: 1.6.1
 
   tailwindcss@4.3.3: {}
 
   tapable@2.3.3: {}
 
-  tar@7.5.20:
+  tar@7.5.22:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
@@ -5732,7 +5723,7 @@ snapshots:
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
 
-  unstorage@1.17.5(@vercel/functions@3.7.5):
+  unstorage@1.17.5(@vercel/functions@3.7.6):
     dependencies:
       anymatch: 3.1.3
       chokidar: 5.0.0
@@ -5743,7 +5734,7 @@ snapshots:
       ofetch: 1.5.1
       ufo: 1.6.4
     optionalDependencies:
-      '@vercel/functions': 3.7.5
+      '@vercel/functions': 3.7.6
 
   uri-js@4.4.1:
     dependencies:
@@ -5773,7 +5764,7 @@ snapshots:
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
-      postcss: 8.5.20
+      postcss: 8.5.23
       rolldown: 1.1.5
       tinyglobby: 0.2.17
     optionalDependencies:
@@ -5812,12 +5803,12 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.28
 
-  volar-service-prettier@0.0.71(@volar/language-service@2.4.28)(prettier@3.9.5):
+  volar-service-prettier@0.0.71(@volar/language-service@2.4.28)(prettier@3.9.6):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
       '@volar/language-service': 2.4.28
-      prettier: 3.9.5
+      prettier: 3.9.6
 
   volar-service-typescript-twoslash-queries@0.0.71(@volar/language-service@2.4.28):
     dependencies:
@@ -5906,11 +5897,11 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  wrap-ansi@7.0.0:
+  wrap-ansi@9.0.2:
     dependencies:
-      ansi-styles: 4.3.0
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
+      ansi-styles: 6.2.3
+      string-width: 7.2.0
+      strip-ansi: 7.2.0
 
   xdg-app-paths@5.5.1:
     dependencies:
@@ -5935,7 +5926,7 @@ snapshots:
       ajv: 8.20.0
       ajv-draft-04: 1.0.0(ajv@8.20.0)
       ajv-i18n: 4.2.0(ajv@8.20.0)
-      prettier: 3.9.5
+      prettier: 3.9.6
       request-light: 0.5.8
       vscode-json-languageservice: 4.1.8
       vscode-languageserver: 9.0.1
@@ -5948,19 +5939,16 @@ snapshots:
 
   yaml@2.9.0: {}
 
-  yargs-parser@21.1.1: {}
-
   yargs-parser@22.0.0: {}
 
-  yargs@17.7.3:
+  yargs@18.1.0:
     dependencies:
-      cliui: 8.0.1
+      cliui: 9.0.1
       escalade: 3.2.0
       get-caller-file: 2.0.5
-      require-directory: 2.1.1
-      string-width: 4.2.3
+      string-width: 8.2.2
       y18n: 5.0.8
-      yargs-parser: 21.1.1
+      yargs-parser: 22.0.0
 
   yocto-queue@1.2.2: {}
 
