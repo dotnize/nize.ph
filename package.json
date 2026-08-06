@@ -16,22 +16,22 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.10",
-    "@astrojs/mdx": "7.0.4",
+    "@astrojs/mdx": "7.0.5",
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
-    "@astrojs/vercel": "11.0.3",
+    "@astrojs/vercel": "11.0.4",
     "@expressive-code/plugin-collapsible-sections": "0.44.1",
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.3",
     "@vercel/analytics": "2.0.1",
-    "astro": "7.1.4",
+    "astro": "7.1.6",
     "astro-expressive-code": "0.44.1",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3"
   },
   "devDependencies": {
     "husky": "9.1.7",
-    "lint-staged": "17.2.0",
+    "lint-staged": "17.3.0",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-organize-imports": "4.3.0",
@@ -44,5 +44,5 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@11.17.0"
+  "packageManager": "pnpm@11.20.0"
 }
