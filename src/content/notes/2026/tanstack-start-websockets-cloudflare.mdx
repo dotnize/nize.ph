@@ -124,7 +124,7 @@ export class ChatRoom extends DurableObject {
     ws: WebSocket,
     code: number,
     reason: string,
-    wasClean: boolean
+    wasClean: boolean,
   ): Promise<void> {
     console.log(`WebSocket closed: ${code} ${reason} (clean: ${wasClean})`);
     this.sessions.delete(ws);

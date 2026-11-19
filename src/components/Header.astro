@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
+
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header class="flex items-center justify-between pt-24">
   <a
     href="/"
-    class="macchiato:rounded-[22px] bg-pfp macchiato:hover:-translate-y-1 transition-[border-radius,translate] duration-200 dark:rounded-[22px] dark:hover:-translate-y-1"
+    class="bg-pfp transition-[border-radius,translate] duration-200 dark:rounded-[22px] dark:hover:-translate-y-1 macchiato:rounded-[22px] macchiato:hover:-translate-y-1"
   >
     <Image
       src="/images/nize.webp"
@@ -15,13 +16,21 @@ import ThemeToggle from "./ThemeToggle.astro";
       height={44}
       loading="eager"
       decoding="async"
-      class="macchiato:rounded-[22px] macchiato:outline-0 outline-foreground nb-shadow-on macchiato:shadow-none rounded-md outline-1 transition-[border-radius,box-shadow] duration-200 hover:shadow-none dark:rounded-[22px] dark:shadow-none dark:outline-0"
+      class="rounded-md nb-shadow-on outline-1 outline-foreground transition-[border-radius,box-shadow] duration-200 hover:shadow-none dark:rounded-[22px] dark:shadow-none dark:outline-0 macchiato:rounded-[22px] macchiato:shadow-none macchiato:outline-0"
     />
   </a>
   <nav>
     <ul class="flex items-center gap-5">
-      <li><a href="/" class="hover:text-accent transition-colors">home</a></li>
-      <li><a href="/notes/" class="hover:text-accent transition-colors">notes</a></li>
+      <li>
+        <a href="/" class="transition-colors hover:text-accent">
+          home
+        </a>
+      </li>
+      <li>
+        <a href="/notes/" class="transition-colors hover:text-accent">
+          notes
+        </a>
+      </li>
       <li class="ml-0.5">
         <ThemeToggle />
       </li>

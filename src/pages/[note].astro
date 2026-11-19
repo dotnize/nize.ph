@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+
 import NoteLayout from "#/layouts/NoteLayout.astro";
 export async function getStaticPaths() {
   const notes = await getCollection("notes");

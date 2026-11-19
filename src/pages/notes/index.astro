@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
+
 import PageLayout from "#/layouts/PageLayout.astro";
 const allNotes = (await getCollection("notes")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const vaultNotes = allNotes.filter((note) => note.id.startsWith("vault/"));
 const notes = allNotes.filter((note) => note.id.startsWith("notes/"));
@@ -14,18 +15,16 @@ const notes = allNotes.filter((note) => note.id.startsWith("notes/"));
       <h1 class="text-3xl font-bold">vault</h1>
       <section class="prose">
         <ul>
-          {
-            vaultNotes.map((note) => (
-              <li>
-                <a
-                  class="text-foreground hover:text-accent decora underline-offset-2 hover:underline"
-                  href={`/${note.id.split("/").pop()}/`}
-                >
-                  {note.data.title}
-                </a>
-              </li>
-            ))
-          }
+          {vaultNotes.map((note) => (
+            <li>
+              <a
+                class="decora text-foreground underline-offset-2 hover:text-accent hover:underline"
+                href={`/${note.id.split("/").pop()}/`}
+              >
+                {note.data.title}
+              </a>
+            </li>
+          ))}
         </ul>
       </section>
     </div>
@@ -34,34 +33,32 @@ const notes = allNotes.filter((note) => note.id.startsWith("notes/"));
       <h1 class="text-3xl font-bold">notes</h1>
       <section>
         <ul class="flex flex-col">
-          {
-            notes.map((note) => (
-              <li>
-                <a
-                  href={`/${note.id.split("/").pop()}/`}
-                  class="group flex w-full flex-wrap gap-2 md:flex-nowrap md:gap-4"
-                >
-                  <div class="flex w-[20ch] gap-2 text-sm">
-                    <span class="text-foreground/90 md:mt-1">
-                      <time datetime={note.data.pubDate.toISOString()}>
-                        {note.data.pubDate.toLocaleDateString("en-us", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </time>
-                    </span>
-                  </div>
-                  <span class="mb-10 flex w-full flex-col gap-2">
-                    <span class="group-hover:text-accent text-lg font-semibold underline-offset-2 transition-all group-hover:underline">
-                      {note.data.title}
-                    </span>
-                    <span class="text-foreground/90 h-full text-sm">{note.data.description}</span>
+          {notes.map((note) => (
+            <li>
+              <a
+                href={`/${note.id.split("/").pop()}/`}
+                class="group flex w-full flex-wrap gap-2 md:flex-nowrap md:gap-4"
+              >
+                <div class="flex w-[20ch] gap-2 text-sm">
+                  <span class="text-foreground/90 md:mt-1">
+                    <time datetime={note.data.pubDate.toISOString()}>
+                      {note.data.pubDate.toLocaleDateString("en-us", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </time>
                   </span>
-                </a>
-              </li>
-            ))
-          }
+                </div>
+                <span class="mb-10 flex w-full flex-col gap-2">
+                  <span class="text-lg font-semibold underline-offset-2 transition-all group-hover:text-accent group-hover:underline">
+                    {note.data.title}
+                  </span>
+                  <span class="h-full text-sm text-foreground/90">{note.data.description}</span>
+                </span>
+              </a>
+            </li>
+          ))}
         </ul>
       </section>
     </div>

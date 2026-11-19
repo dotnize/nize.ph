@@ -3,14 +3,14 @@ import { getCollection } from "astro:content";
 import type { ProfilePage, WithContext } from "schema-dts";
 
 import IconEmail from "#/components/icons/IconEmail.astro";
+import IconFlagPh from "#/components/icons/IconFlagPh.astro";
 import IconGitHub from "#/components/icons/IconGitHub.astro";
 import IconLink from "#/components/icons/IconLink.astro";
 import IconLinkedIn from "#/components/icons/IconLinkedIn.astro";
 import IconX from "#/components/icons/IconX.astro";
 import ProjectCard from "#/components/ProjectCard.astro";
-import { SITE_DESCRIPTION } from "#/consts";
+import { SITE_DESCRIPTION } from "#/consts.ts";
 import PageLayout from "#/layouts/PageLayout.astro";
-import IconFlagPh from "#/components/icons/IconFlagPh.astro";
 
 const projects = [
   {
@@ -63,26 +63,23 @@ const schema: WithContext<ProfilePage> = {
   <main class="mt-4 space-y-24">
     <div class="space-y-10">
       <div class="space-y-4">
-        <h1 class="text-foreground-highlight text-6xl font-black sm:text-7xl">nize</h1>
+        <h1 class="text-6xl font-black text-foreground-highlight sm:text-7xl">nize</h1>
 
         <p class="group text-xl sm:text-2xl">
           i'm nathaniel, a multi-disciplinary <span class="text-accent">software engineer </span>
           <br class="max-sm:hidden" />
           who loves building stuff on the{" "}
-          <span
-            class="text-accent-foreground bg-accent inline-block -rotate-4 rounded-md px-1 transition-transform duration-300 group-hover:rotate-0 sm:-rotate-5"
-          >
+          <span class="inline-block -rotate-4 rounded-md bg-accent px-1 text-accent-foreground transition-transform duration-300 group-hover:rotate-0 sm:-rotate-5">
             web
-          </span>.
+          </span>
+          .
         </p>
       </div>
 
       <div class="flex items-center gap-10">
         <a href="mailto:nat@nize.ph" title="nat@nize.ph">
           <span class="sr-only">Email</span>
-          <IconEmail
-            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
-          />
+          <IconEmail class="size-6 text-foreground/90 transition-colors duration-200 hover:text-accent" />
         </a>
         <a
           href="https://github.com/dotnize"
@@ -91,9 +88,7 @@ const schema: WithContext<ProfilePage> = {
           rel="noopener noreferrer"
         >
           <span class="sr-only">dotnize on GitHub</span>
-          <IconGitHub
-            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
-          />
+          <IconGitHub class="size-6 text-foreground/90 transition-colors duration-200 hover:text-accent" />
         </a>
         <a
           href="https://x.com/dotnize"
@@ -102,9 +97,7 @@ const schema: WithContext<ProfilePage> = {
           rel="noopener noreferrer"
         >
           <span class="sr-only">dotnize on X</span>
-          <IconX
-            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
-          />
+          <IconX class="size-6 text-foreground/90 transition-colors duration-200 hover:text-accent" />
         </a>
         <a
           href="https://linkedin.com/in/nize"
@@ -113,9 +106,7 @@ const schema: WithContext<ProfilePage> = {
           rel="noopener noreferrer"
         >
           <span class="sr-only">nize on LinkedIn</span>
-          <IconLinkedIn
-            class="text-foreground/90 hover:text-accent size-6 transition-colors duration-200"
-          />
+          <IconLinkedIn class="size-6 text-foreground/90 transition-colors duration-200 hover:text-accent" />
         </a>
       </div>
     </div>
@@ -130,62 +121,65 @@ const schema: WithContext<ProfilePage> = {
           title="dotnize on GitHub"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-accent inline-flex items-center gap-1 text-sm hover:underline"
+          class="inline-flex items-center gap-1 text-sm text-accent hover:underline"
         >
           more on github <IconLink class="size-4" />
         </a>
       </div>
       <div class="grid grid-cols-2 gap-x-2 gap-y-3 sm:gap-x-4 sm:gap-y-5">
-        {projects.map((project) => <ProjectCard {...project} />)}
+        {projects.map((project) => (
+          <ProjectCard {...project} />
+        ))}
       </div>
     </div>
 
     <div class="space-y-4">
       <h2 class="text-3xl font-bold">writing</h2>
       <div class="grid gap-2">
-        {
-          latestNotes.map((note) => (
-            <a
-              class="group relative flex items-center justify-between"
-              href={`/${note.id.split("/").pop()}/`}
-            >
-              <span class="text-accent absolute -left-6 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                &rightarrow;
-              </span>
-              <span class="text-foreground group-hover:text-accent font-medium transition-colors duration-200">
-                {note.data.title}
-              </span>
-              <time datetime={note.data.pubDate.toISOString()} class="text-sm max-sm:sr-only">
-                {note.data.pubDate.toLocaleDateString("en-us", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </time>
-            </a>
-          ))
-        }
+        {latestNotes.map((note) => (
+          <a
+            class="group relative flex items-center justify-between"
+            href={`/${note.id.split("/").pop()}/`}
+          >
+            <span class="absolute -left-6 text-accent opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+              &rightarrow;
+            </span>
+            <span class="font-medium text-foreground transition-colors duration-200 group-hover:text-accent">
+              {note.data.title}
+            </span>
+            <time datetime={note.data.pubDate.toISOString()} class="text-sm max-sm:sr-only">
+              {note.data.pubDate.toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+          </a>
+        ))}
       </div>
-      <a href="/notes/" class="text-accent text-sm hover:underline"> more notes &rightarrow; </a>
+      <a href="/notes/" class="text-sm text-accent hover:underline">
+        {" "}
+        more notes &rightarrow;{" "}
+      </a>
     </div>
 
     <div class="space-y-3">
       <h2 class="mb-4 text-3xl font-bold">webring</h2>
       <p>
         this website is part of the{" "}
-        <a href="https://webring.antaresph.dev/" class="text-accent group">
+        <a href="https://webring.antaresph.dev/" class="group text-accent">
           <IconFlagPh class="inline size-4" />
           <span class="group-hover:underline"> Pinoy Websites Webring</span>
         </a>
       </p>
       <div class="space-x-4 text-sm">
-        <a class="text-accent group" href="https://webring.antaresph.dev/previous">
+        <a class="group text-accent" href="https://webring.antaresph.dev/previous">
           &longleftarrow; <span class="group-hover:underline">previous</span>
         </a>
-        <a class="text-accent group" href="https://webring.antaresph.dev/random">
+        <a class="group text-accent" href="https://webring.antaresph.dev/random">
           &leftrightharpoons; <span class="group-hover:underline">random</span>
         </a>
-        <a class="text-accent group" href="https://webring.antaresph.dev/next">
+        <a class="group text-accent" href="https://webring.antaresph.dev/next">
           <span class="group-hover:underline">next</span> &longrightarrow;
         </a>
       </div>
@@ -194,8 +188,12 @@ const schema: WithContext<ProfilePage> = {
     <div class="space-y-2 rounded-lg border border-current/10 p-6 text-sm">
       <p class="text-foreground/70">previous versions</p>
       <div class="flex gap-4">
-        <a class="text-accent p-1 hover:underline" href="https://v1.nize.ph">v1</a>
-        <a class="text-accent p-1 hover:underline" href="https://v2.nize.ph">v2</a>
+        <a class="p-1 text-accent hover:underline" href="https://v1.nize.ph">
+          v1
+        </a>
+        <a class="p-1 text-accent hover:underline" href="https://v2.nize.ph">
+          v2
+        </a>
       </div>
     </div>
   </main>

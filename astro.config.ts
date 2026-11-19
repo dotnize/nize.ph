@@ -1,12 +1,10 @@
-import { defineConfig, fontProviders } from "astro/config";
-
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
-import expressiveCode from "astro-expressive-code";
-
 import vercel from "@astrojs/vercel";
+import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import tailwindcss from "@tailwindcss/vite";
+import expressiveCode from "astro-expressive-code";
+import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
