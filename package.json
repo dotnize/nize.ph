@@ -1,48 +1,51 @@
 {
   "name": "nize.ph",
+  "private": true,
   "type": "module",
-  "private": "true",
+  "imports": {
+    "#/*": "./src/*"
+  },
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier -w .",
-    "check": "pnpm format && astro check",
+    "check": "pnpm format && pnpm typecheck",
+    "typecheck": "astro check",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "prepare": "husky",
     "deps": "pnpm dlx taze@latest -Ilw",
     "deps:major": "pnpm dlx taze@latest major -Ilw"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.10",
-    "@astrojs/mdx": "7.0.8",
+    "@astrojs/mdx": "8.1.6",
     "@astrojs/rss": "4.0.19",
-    "@astrojs/sitemap": "3.7.3",
-    "@astrojs/vercel": "11.0.8",
-    "@expressive-code/plugin-collapsible-sections": "0.44.1",
+    "@astrojs/sitemap": "3.7.6",
+    "@astrojs/vercel": "11.0.22",
+    "@expressive-code/plugin-collapsible-sections": "0.44.4",
     "@tailwindcss/typography": "0.5.20",
-    "@tailwindcss/vite": "4.3.3",
+    "@tailwindcss/vite": "4.3.5",
     "@vercel/analytics": "2.0.1",
-    "astro": "7.2.9",
-    "astro-expressive-code": "0.44.1",
-    "tailwindcss": "4.3.3",
-    "typescript": "6.0.3"
+    "astro": "7.4.13",
+    "astro-expressive-code": "0.44.4",
+    "tailwindcss": "4.3.5"
   },
   "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@astrojs/compiler-rs": "0.5.3",
+    "@types/node": "26.6.6",
     "husky": "9.1.7",
-    "lint-staged": "17.4.1",
-    "prettier": "3.9.6",
-    "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-organize-imports": "4.3.0",
-    "prettier-plugin-tailwindcss": "0.8.1",
-    "schema-dts": "2.0.0"
+    "lint-staged": "17.6.1",
+    "oxfmt": "0.79.0",
+    "schema-dts": "2.1.0",
+    "typescript": "6.0.3"
   },
   "lint-staged": {
-    "*": "prettier --ignore-unknown --write"
+    "*": "oxfmt --no-error-on-unmatched-pattern"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   },
-  "packageManager": "pnpm@11.24.0"
+  "packageManager": "pnpm@12.21.0"
 }

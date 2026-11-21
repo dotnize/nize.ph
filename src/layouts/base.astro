@@ -2,9 +2,10 @@
 import Analytics from "@vercel/analytics/astro";
 import { Font } from "astro:assets";
 import type { WebPage, WithContext } from "schema-dts";
+
 import "./base.css";
 
-import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "#/consts";
+import { SITE_DESCRIPTION, SITE_TITLE, type LayoutProps } from "#/consts.ts";
 export type Props = LayoutProps;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -72,7 +73,6 @@ const schema = schemaOverride ?? defaultSchema;
     {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
-
     <Font cssVariable="--font-custom" preload />
 
     <script is:inline>
@@ -100,7 +100,7 @@ const schema = schemaOverride ?? defaultSchema;
       console.log("Hello, fellow developer! 👋");
     </script>
   </head>
-  <body class="bg-background text-foreground font-main overflow-y-scroll">
+  <body class="overflow-y-scroll bg-background font-main text-foreground">
     <slot />
 
     <Analytics />

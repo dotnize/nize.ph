@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import { type CollectionEntry } from "astro:content";
 import type { Article, WithContext } from "schema-dts";
+
 import PageLayout from "./PageLayout.astro";
 
 type CollectionData = CollectionEntry<"notes">["data"];
@@ -39,71 +40,61 @@ const schema: WithContext<Article> = {
 >
   <div class="mt-8 mb-4 space-y-8">
     <article>
-      {
-        !vault && (
-          <div class="flex flex-col gap-1">
-            <time datetime={pubDate.toISOString()}>
-              {pubDate.toLocaleDateString("en-us", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
+      {!vault && (
+        <div class="flex flex-col gap-1">
+          <time datetime={pubDate.toISOString()}>
+            {pubDate.toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
 
-            {updatedDate && (
-              <div class="text-xs opacity-90">
-                updated on{" "}
-                <time datetime={updatedDate.toISOString()}>
-                  {updatedDate.toLocaleDateString("en-us", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
-              </div>
-            )}
-          </div>
-        )
-      }
-
-      <div class="mt-2 mb-10 flex flex-col gap-1.5">
-        <h1 class="text-3xl font-bold">
-          {title}
-        </h1>
-
-        {
-          vault && updatedDate && (
-            <div class="text-sm opacity-90">
-              updated{" "}
+          {updatedDate && (
+            <div class="text-xs opacity-90">
+              updated on{" "}
               <time datetime={updatedDate.toISOString()}>
                 {updatedDate.toLocaleDateString("en-us", {
                   year: "numeric",
                   month: "long",
+                  day: "numeric",
                 })}
               </time>
             </div>
-          )
-        }
-        {
-          heroImage && (
-            <Image width={720} height={360} src={heroImage} alt="" class="rounded-md shadow-md" />
-          )
-        }
+          )}
+        </div>
+      )}
+
+      <div class="mt-2 mb-10 flex flex-col gap-1.5">
+        <h1 class="text-3xl font-bold">{title}</h1>
+
+        {vault && updatedDate && (
+          <div class="text-sm opacity-90">
+            updated{" "}
+            <time datetime={updatedDate.toISOString()}>
+              {updatedDate.toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "long",
+              })}
+            </time>
+          </div>
+        )}
+        {heroImage && (
+          <Image width={720} height={360} src={heroImage} alt="" class="rounded-md shadow-md" />
+        )}
       </div>
       <div class="prose min-w-0 wrap-break-word">
         <slot />
       </div>
     </article>
 
-    {
-      vault ? undefined : (
-        <button
-          class="text-accent group cursor-pointer"
-          onclick={"window.scrollTo({ top: 0, behavior: 'smooth' })"}
-        >
-          &uparrow; <span class="group-hover:underline">back to top</span>
-        </button>
-      )
-    }
+    {vault ? undefined : (
+      <button
+        class="group cursor-pointer text-accent"
+        onclick={"window.scrollTo({ top: 0, behavior: 'smooth' })"}
+      >
+        &uparrow; <span class="group-hover:underline">back to top</span>
+      </button>
+    )}
   </div>
 </PageLayout>

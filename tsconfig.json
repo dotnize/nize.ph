@@ -4,8 +4,7 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "strictNullChecks": true,
-    "paths": {
-      "#/*": ["./src/*"]
-    }
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   }
 }

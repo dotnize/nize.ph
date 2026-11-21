@@ -1,0 +1,40 @@
+{
+  "files.readonlyInclude": {
+    "**/.astro/**/*": true,
+    "pnpm-lock.yaml": true
+  },
+  "files.watcherExclude": {
+    "**/.astro/**/*": true,
+    "pnpm-lock.yaml": true
+  },
+  "search.exclude": {
+    "**/.astro/**/*": true,
+    "pnpm-lock.yaml": true
+  },
+
+  // use LF line endings
+  "files.eol": "\n",
+
+  // disable prettier, eslint, biome
+  "prettier.enable": false,
+  "eslint.enable": false,
+  "biome.enabled": false,
+  // enable oxfmt
+  "oxc.enable": true,
+
+  // set oxfmt as default formatter, including .astro files
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+
+  // format on save and paste
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
+  // tailwind intellisense inside class:list
+  "tailwindCSS.classAttributes": ["class", "class:list"],
+
+  // use typescript 6 for now
+  "js/ts.experimental.useTsgo": false
+}
