@@ -1,0 +1,26 @@
+---
+interface Props {
+  href: string;
+  active?: boolean;
+}
+
+const { href, active = false } = Astro.props;
+---
+
+<li>
+  <a
+    href={href}
+    aria-current={active ? "page" : undefined}
+    class:list={[
+      "group relative flex h-8 w-24 rounded-t sm:w-36 md:w-40",
+      { "bg-background": active },
+    ]}
+  >
+    <span class="relative z-10 flex size-full items-center gap-2 px-3">
+      <slot />
+    </span>
+    {!active && (
+      <span class="absolute inset-0 scale-90 rounded-t bg-background opacity-0 transition-[scale,opacity] duration-200 group-hover:scale-100 group-hover:opacity-50" />
+    )}
+  </a>
+</li>

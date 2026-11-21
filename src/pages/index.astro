@@ -14,10 +14,10 @@ import PageLayout from "#/layouts/PageLayout.astro";
 
 const projects = [
   {
-    title: "Venur",
-    description: "The ecommerce ecosystem for entrepreneurs and businesses.",
-    url: "https://venur.me/",
-    image: "/images/venur.webp",
+    title: "Krafta",
+    description: "Public feedback boards, roadmaps, and changelogs for product teams.",
+    url: "https://krafta.io/",
+    image: "/images/krafta.webp",
   },
   {
     title: "chessu",
@@ -63,7 +63,15 @@ const schema: WithContext<ProfilePage> = {
   <main class="mt-4 space-y-24">
     <div class="space-y-10">
       <div class="space-y-4">
-        <h1 class="text-6xl font-black text-foreground-highlight sm:text-7xl">nize</h1>
+        <h1 class="text-6xl font-black text-foreground-highlight sm:text-7xl">
+          <span
+            class="mr-[0.3em] inline-block align-middle text-[0.6em] leading-none text-accent"
+            aria-hidden="true"
+          >
+            &gt;
+          </span>
+          nize
+        </h1>
 
         <p class="group text-xl sm:text-2xl">
           i'm nathaniel, a multi-disciplinary <span class="text-accent">software engineer </span>

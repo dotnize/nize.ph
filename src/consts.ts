@@ -12,5 +12,7 @@ export interface LayoutProps {
   openGraphType?: "website" | "article";
   publishedTime?: string;
   modifiedTime?: string;
+  /** which titlebar tab to mark as active; inferred from the URL when omitted */
+  tab?: "home" | "notes";
   children: any;
 }

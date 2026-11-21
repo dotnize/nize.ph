@@ -1,0 +1,65 @@
+---
+import IconDocument from "#/components/icons/IconDocument.astro";
+import IconHome from "#/components/icons/IconHome.astro";
+import ThemeToggle from "#/components/ThemeToggle.astro";
+
+import Tab from "./Tab.astro";
+
+export type WindowTab = "home" | "notes";
+
+interface Props {
+  tab?: WindowTab;
+}
+
+const { pathname } = Astro.url;
+const tab: WindowTab | undefined =
+  Astro.props.tab ??
+  (pathname === "/" ? "home" : pathname.startsWith("/notes") ? "notes" : undefined);
+---
+
+<header
+  id="titlebar"
+  class="sticky top-0 z-50 flex items-center justify-between rounded-t border border-b-0 border-window-border bg-titlebar px-3 transition-[top] duration-200"
+>
+  <div class="flex items-center gap-3 pt-1">
+    <div class="flex gap-2" aria-hidden="true">
+      <div class="size-1.5 rounded-xs bg-dot-1"></div>
+      <div class="size-1.5 rounded-xs bg-dot-2"></div>
+      <div class="size-1.5 rounded-xs bg-dot-3"></div>
+    </div>
+    <nav class="text-sm">
+      <ul class="flex gap-1">
+        <Tab href="/" active={tab === "home"}>
+          <IconHome class="size-4 shrink-0" />
+          home
+        </Tab>
+        <Tab href="/notes/" active={tab === "notes"}>
+          <IconDocument class="size-4 shrink-0" />
+          notes
+        </Tab>
+      </ul>
+    </nav>
+  </div>
+  <ThemeToggle />
+</header>
+
+<script>
+  // hide the titlebar when scrolling down, show it again when scrolling up
+  const titlebar = document.getElementById("titlebar");
+  let prevScrollY = window.scrollY;
+  window.addEventListener(
+    "scroll",
+    () => {
+      const scrollY = window.scrollY;
+      if (titlebar) {
+        if (prevScrollY > scrollY) {
+          titlebar.classList.replace("-top-10", "top-0");
+        } else if (scrollY > 192) {
+          titlebar.classList.replace("top-0", "-top-10");
+        }
+      }
+      prevScrollY = scrollY;
+    },
+    { passive: true },
+  );
+</script>

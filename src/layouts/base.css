@@ -2,7 +2,6 @@
 
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:is(.dark *));
-@custom-variant macchiato (&:is(.macchiato *));
 
 @theme {
   --font-main: var(--font-custom);
@@ -15,6 +14,27 @@
 
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+
+  /* app window */
+  --color-desktop: var(--desktop);
+  --color-titlebar: var(--titlebar);
+  --color-window-border: var(--window-border);
+  --color-muted: var(--muted);
+  --color-dot-1: var(--dot-1);
+  --color-dot-2: var(--dot-2);
+  --color-dot-3: var(--dot-3);
+
+  --animate-wiggle: wiggle 12s linear infinite;
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
 }
 
 @utility nb-shadow-on {
@@ -63,7 +83,7 @@ code {
 }
 
 :root {
-  --background: #f9f5d7;
+  --background: #fbf1c7;
   --foreground: #3c3836;
   --foreground-highlight: #3c3836;
 
@@ -71,6 +91,14 @@ code {
 
   --accent: #427b58;
   --accent-foreground: #f9f5d7;
+
+  --desktop: #f9f5d7;
+  --titlebar: #ebdbb2;
+  --window-border: #ebdbb2;
+  --muted: #665c54;
+  --dot-1: #d79921;
+  --dot-2: #98971a;
+  --dot-3: #cc241d;
 }
 
 .dark {
@@ -80,15 +108,12 @@ code {
 
   --accent: #8ec07c;
   --accent-foreground: #1d2021;
-}
 
-.macchiato {
-  --background: #1e1e2e;
-  --foreground: #cdd6f4;
-  --foreground-highlight: #f5c2e7;
-
-  --pfp: #f9e2af;
-
-  --accent: #f5c2e7;
-  --accent-foreground: black;
+  --desktop: #161818;
+  --titlebar: #161818;
+  --window-border: #282828;
+  --muted: #a89984;
+  --dot-1: #fabd2f;
+  --dot-2: #b8bb26;
+  --dot-3: #fb4934;
 }

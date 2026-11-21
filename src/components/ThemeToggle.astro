@@ -2,36 +2,17 @@
   id="theme-toggle"
   title="Toggle theme"
   aria-label="Toggle theme"
-  class="cursor-pointer rounded-xl bg-foreground-highlight p-3 text-background transition-[color,background-color,border-radius] duration-200 hover:bg-accent hover:text-accent-foreground macchiato:rounded-[22px]"
+  class="-mr-2 cursor-pointer rounded-md p-1.5 transition-colors duration-200 hover:bg-background hover:text-accent"
 >
-  <!-- Sun SVG -->
+  <!-- Moon: shown in light mode -->
   <svg
-    id="sun-icon"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
     stroke-width="2"
     stroke="currentColor"
-    class="size-5"
-    style="display: none;"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-    ></path>
-  </svg>
-
-  <!-- Moon SVG -->
-  <svg
-    id="moon-icon"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke-width="2"
-    stroke="currentColor"
-    class="size-5"
-    style="display: none;"
+    class="size-5 dark:hidden"
+    aria-hidden="true"
   >
     <path
       stroke-linecap="round"
@@ -40,91 +21,29 @@
     ></path>
   </svg>
 
-  <!-- Heart SVG -->
+  <!-- Sun: shown in dark mode -->
   <svg
-    id="heart-icon"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
     stroke-width="2"
     stroke="currentColor"
-    class="size-5"
-    style="display: none;"
+    class="hidden size-5 dark:block"
+    aria-hidden="true"
   >
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
-      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+      d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
     ></path>
   </svg>
 </button>
 
 <script is:inline>
-  let theme = "dark";
-
-  const button = document.getElementById("theme-toggle");
-  const sunIcon = document.getElementById("sun-icon");
-  const moonIcon = document.getElementById("moon-icon");
-  const heartIcon = document.getElementById("heart-icon");
-
-  function updateIconVisibility() {
-    if (theme === "dark") {
-      sunIcon.style.display = "none";
-      moonIcon.style.display = "none";
-      heartIcon.style.display = "block";
-    } else if (theme === "macchiato") {
-      sunIcon.style.display = "block";
-      moonIcon.style.display = "none";
-      heartIcon.style.display = "none";
-    } else {
-      sunIcon.style.display = "none";
-      moonIcon.style.display = "block";
-      heartIcon.style.display = "none";
-    }
-  }
-
-  function toggleTheme() {
-    if (
-      document.documentElement.classList.contains("dark") ||
-      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.remove("light");
-      document.documentElement.classList.add("macchiato");
-      localStorage.theme = "macchiato";
-      theme = "macchiato";
-    } else if (document.documentElement.classList.contains("macchiato")) {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.remove("macchiato");
-      document.documentElement.classList.add("light");
-      localStorage.theme = "light";
-      theme = "light";
-    } else {
-      document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("macchiato");
-      document.documentElement.classList.remove("light");
-      localStorage.theme = "dark";
-      theme = "dark";
-    }
-
-    updateIconVisibility();
-  }
-
-  // Initialize on page load
-  function init() {
-    if (document.documentElement.classList.contains("macchiato")) {
-      theme = "macchiato";
-    } else if (document.documentElement.classList.contains("dark")) {
-      theme = "dark";
-    } else {
-      theme = "light";
-    }
-
-    updateIconVisibility();
-  }
-
-  // Event listener
-  button.addEventListener("click", toggleTheme);
-
-  init();
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+    const dark = !document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark", dark);
+    document.documentElement.classList.toggle("light", !dark);
+    localStorage.theme = dark ? "dark" : "light";
+  });
 </script>
