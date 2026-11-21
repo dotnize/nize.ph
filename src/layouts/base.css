@@ -83,18 +83,18 @@ code {
 }
 
 :root {
-  --background: #fbf1c7;
+  --background: #f9f5d7;
   --foreground: #3c3836;
   --foreground-highlight: #3c3836;
 
-  --pfp: #fbf1c7;
+  --pfp: #f9f5d7;
 
   --accent: #427b58;
   --accent-foreground: #f9f5d7;
 
-  --desktop: #f9f5d7;
+  --desktop: #fbf1c7;
   --titlebar: #ebdbb2;
-  --window-border: #ebdbb2;
+  --window-border: #e4d4ab;
   --muted: #665c54;
   --dot-1: #d79921;
   --dot-2: #98971a;
@@ -105,6 +105,8 @@ code {
   --background: #1d2021;
   --foreground: #d5c4a1;
   --foreground-highlight: #d5c4a1;
+
+  --pfp: #fbf1c7;
 
   --accent: #8ec07c;
   --accent-foreground: #1d2021;
