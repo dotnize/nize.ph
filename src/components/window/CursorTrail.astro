@@ -1,0 +1,65 @@
+---
+// Emoticon that follows the mouse. It sits *behind* the app window,
+// so it's only visible while the cursor is out on the "desktop".
+---
+
+<div
+  id="cursor-trail"
+  aria-hidden="true"
+  class="pointer-events-none fixed top-0 left-0 z-10 opacity-0 transition-opacity duration-200 select-none"
+>
+  <div
+    id="cursor-emoticon"
+    class="animate-wiggle font-mono text-sm whitespace-nowrap text-muted"
+  ></div>
+</div>
+
+<script>
+  const emoticons = [
+    "(⁠ﾉ⁠◕⁠ヮ⁠◕⁠)⁠ﾉ⁠*⁠.⁠✧",
+    "╰⁠(⁠ ⁠･⁠ ⁠ᗜ⁠ ⁠･⁠ ⁠)⁠➝",
+    "┌⁠(⁠・⁠。⁠・⁠)⁠┘⁠♪",
+    "(⁠人⁠ ⁠•͈⁠ᴗ⁠•͈⁠)",
+    "/⁠ᐠ⁠｡⁠ꞈ⁠｡⁠ᐟ⁠\\",
+    "(⁠^⁠～⁠^⁠;⁠)⁠ゞ",
+    "♪⁠(⁠┌⁠・⁠。⁠・⁠)⁠┌",
+    "^_^",
+    "ヽ(^o^)丿",
+    "ʕ •ᴥ•ʔ",
+    "(●＾o＾●)",
+  ];
+
+  const trail = document.getElementById("cursor-trail");
+  const emoticon = document.getElementById("cursor-emoticon");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (trail && emoticon) {
+    emoticon.textContent = emoticons[Math.floor(Math.random() * emoticons.length)];
+    let visible = false;
+
+    window.addEventListener(
+      "pointermove",
+      (e) => {
+        if (e.pointerType !== "mouse") return;
+
+        const x = e.clientX - trail.offsetWidth / 2;
+        const y = e.clientY - trail.offsetHeight / 2;
+        trail.animate(
+          { transform: `translate(${x}px, ${y}px)` },
+          { duration: !visible || reducedMotion.matches ? 0 : 700, fill: "forwards" },
+        );
+
+        if (!visible) {
+          visible = true;
+          trail.classList.remove("opacity-0");
+        }
+      },
+      { passive: true },
+    );
+
+    document.documentElement.addEventListener("mouseleave", () => {
+      visible = false;
+      trail.classList.add("opacity-0");
+    });
+  }
+</script>

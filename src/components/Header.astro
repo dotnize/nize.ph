@@ -1,10 +1,8 @@
 ---
 import { Image } from "astro:assets";
-
-import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<header class="flex items-center justify-between pt-24">
+<div class="flex items-center pt-10 sm:pt-14">
   <a
     href="/"
     class="bg-pfp transition-[border-radius,translate] duration-200 dark:rounded-[22px] dark:hover:-translate-y-1 macchiato:rounded-[22px] macchiato:hover:-translate-y-1"
@@ -19,21 +17,4 @@ import ThemeToggle from "./ThemeToggle.astro";
       class="rounded-md nb-shadow-on outline-1 outline-foreground transition-[border-radius,box-shadow] duration-200 hover:shadow-none dark:rounded-[22px] dark:shadow-none dark:outline-0 macchiato:rounded-[22px] macchiato:shadow-none macchiato:outline-0"
     />
   </a>
-  <nav>
-    <ul class="flex items-center gap-5">
-      <li>
-        <a href="/" class="transition-colors hover:text-accent">
-          home
-        </a>
-      </li>
-      <li>
-        <a href="/notes/" class="transition-colors hover:text-accent">
-          notes
-        </a>
-      </li>
-      <li class="ml-0.5">
-        <ThemeToggle />
-      </li>
-    </ul>
-  </nav>
-</header>
+</div>

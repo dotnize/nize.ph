@@ -1,6 +1,8 @@
 ---
 import Footer from "#/components/Footer.astro";
 import Header from "#/components/Header.astro";
+import CursorTrail from "#/components/window/CursorTrail.astro";
+import Titlebar from "#/components/window/Titlebar.astro";
 import { type LayoutProps } from "#/consts.ts";
 // import ScrollTop from "#/components/ScrollTop.astro";
 
@@ -12,7 +14,7 @@ const { title, description, image } = Astro.props;
 // const isBlogPost = pathname !== "/blog" && pathname !== "/blog/" && pathname.startsWith("/blog/");
 // const pageImage = image || (title !== "404" && !isBlogPost ? "/images/og.jpg" : undefined);
 const pageImage = image || (title !== "404" ? "/images/og.jpg" : undefined);
-const { schema, openGraphType, publishedTime, modifiedTime } = Astro.props;
+const { schema, openGraphType, publishedTime, modifiedTime, tab } = Astro.props;
 ---
 
 <Base
@@ -24,11 +26,19 @@ const { schema, openGraphType, publishedTime, modifiedTime } = Astro.props;
   publishedTime={publishedTime}
   modifiedTime={modifiedTime}
 >
-  <div class="mx-auto max-w-prose space-y-2 max-md:px-4">
-    <Header />
-    <div class="min-h-[calc(100vh-28rem)]">
-      <slot />
+  <CursorTrail />
+
+  <div class="mx-auto flex min-h-dvh max-w-3xl flex-col px-2 pt-16 sm:pt-28">
+    <Titlebar tab={tab} />
+
+    <div class="relative z-20 flex flex-1 flex-col border-x border-window-border bg-background px-4 shadow-xl sm:px-10">
+      <div class="mx-auto flex w-full max-w-prose flex-1 flex-col space-y-2">
+        <Header />
+        <div class="flex-1">
+          <slot />
+        </div>
+        <Footer />
+      </div>
     </div>
-    <Footer />
   </div>
 </Base>
