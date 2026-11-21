@@ -2,7 +2,6 @@
 
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:is(.dark *));
-@custom-variant macchiato (&:is(.macchiato *));
 
 @theme {
   --font-main: var(--font-custom);
@@ -117,23 +116,4 @@ code {
   --dot-1: #fabd2f;
   --dot-2: #b8bb26;
   --dot-3: #fb4934;
-}
-
-.macchiato {
-  --background: #1e1e2e;
-  --foreground: #cdd6f4;
-  --foreground-highlight: #f5c2e7;
-
-  --pfp: #f9e2af;
-
-  --accent: #f5c2e7;
-  --accent-foreground: black;
-
-  --desktop: #11111b;
-  --titlebar: #181825;
-  --window-border: #313244;
-  --muted: #9399b2;
-  --dot-1: #f9e2af;
-  --dot-2: #a6e3a1;
-  --dot-3: #f38ba8;
 }

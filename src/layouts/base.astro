@@ -77,23 +77,13 @@ const schema = schemaOverride ?? defaultSchema;
 
     <script is:inline>
       function setTheme(doc) {
-        if (localStorage.theme === "macchiato") {
-          doc.documentElement.classList.remove("dark");
-          doc.documentElement.classList.remove("light");
-          doc.documentElement.classList.add("macchiato");
-        } else if (
-          localStorage.theme === "dark" ||
-          (!localStorage.getItem("theme") &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          doc.documentElement.classList.add("dark");
-          doc.documentElement.classList.remove("light");
-          doc.documentElement.classList.remove("macchiato");
-        } else {
-          doc.documentElement.classList.remove("dark");
-          doc.documentElement.classList.add("light");
-          doc.documentElement.classList.remove("macchiato");
-        }
+        // no stored choice (or a stale one, like the old "macchiato") follows the system
+        const stored = localStorage.getItem("theme");
+        const dark =
+          stored === "dark" ||
+          (stored !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        doc.documentElement.classList.toggle("dark", dark);
+        doc.documentElement.classList.toggle("light", !dark);
       }
       setTheme(document);
       document.addEventListener("astro:before-swap", (ev) => setTheme(ev.newDocument));

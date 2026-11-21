@@ -11,7 +11,7 @@ export default defineConfig({
   site: "https://nize.ph",
   integrations: [
     expressiveCode({
-      themes: ["everforest-light", "everforest-dark", "catppuccin-macchiato"],
+      themes: ["everforest-light", "everforest-dark"],
       themeCssSelector: (theme) => `.${theme.name.split("-").at(-1)}`,
       plugins: [pluginCollapsibleSections()],
     }),
