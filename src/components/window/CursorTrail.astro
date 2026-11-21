@@ -31,7 +31,6 @@
 
   const trail = document.getElementById("cursor-trail");
   const emoticon = document.getElementById("cursor-emoticon");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   if (trail && emoticon) {
     emoticon.textContent = emoticons[Math.floor(Math.random() * emoticons.length)];
@@ -46,7 +45,7 @@
         const y = e.clientY - trail.offsetHeight / 2;
         trail.animate(
           { transform: `translate(${x}px, ${y}px)` },
-          { duration: !visible || reducedMotion.matches ? 0 : 700, fill: "forwards" },
+          { duration: !visible ? 0 : 700, fill: "forwards" },
         );
 
         if (!visible) {
