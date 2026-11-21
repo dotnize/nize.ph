@@ -18,9 +18,8 @@ import FormattedDate from "~/components/FormattedDate.astro";
 import IconLink from "~/components/icons/IconLink.astro";
 
 const featuredProject: CardProps = {
-  title: "Venur",
-  description:
-    "The ecommerce ecosystem for freelancers, entrepreneurs, and forward-thinking businesses.",
+  title: "Krafta",
+  description: "Public feedback boards, roadmaps, and changelogs for product teams.",
 };
 
 const latestPost = (await getCollection("blog")).sort(
@@ -103,14 +102,14 @@ const latestPost = (await getCollection("blog")).sort(
 
           <a
             slot="link"
-            href="https://venur.me"
+            href="https://krafta.io"
             class="flex items-center gap-1 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
-            title="Venur"
+            title="Krafta"
           >
             <IconLink class="size-4" />
-            venur.me
+            krafta.io
           </a>
 
           <!-- <a
