@@ -21,13 +21,13 @@
   "dependencies": {
     "@astrojs/mdx": "8.1.6",
     "@astrojs/rss": "4.0.19",
-    "@astrojs/sitemap": "3.7.5",
+    "@astrojs/sitemap": "3.7.6",
     "@astrojs/vercel": "11.0.22",
     "@expressive-code/plugin-collapsible-sections": "0.44.4",
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.5",
     "@vercel/analytics": "2.0.1",
-    "astro": "7.4.12",
+    "astro": "7.4.13",
     "astro-expressive-code": "0.44.4",
     "tailwindcss": "4.3.5"
   },
